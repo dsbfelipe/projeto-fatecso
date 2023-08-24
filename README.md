@@ -19,8 +19,6 @@ Para a análise geral, o aplicativo apresenta uma aba dedicada ao extrato das tr
 
     * Os usuários podem adicionar outros membros ao grupo, convidando-os através de e-mail ou nome de usuário. 
 
-    * Membros do grupo podem registrar suas despesas pessoais, incluindo o valor da despesa, categoria e descrição. 
-
     * Quando um membro registra uma despesa, ele tem a possibilidade de compartilhar com o grupo para acompanhamento. 
 
 * Permitir que os usuários definam níveis de acesso aos detalhes dos gastos e outros membros do grupo.
