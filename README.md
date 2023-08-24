@@ -11,14 +11,38 @@ Para a análise geral, o aplicativo apresenta uma aba dedicada ao extrato das tr
 
 * Os usuários devem ser capazes de criar contas de usuário com informações básicas, como nome e senha. 
 
+* Usuários podem registrar suas despesas pessoais, incluindo o valor da despesa, categoria e descrição. 
+
+* O aplicativo disponibiliza uma lista de despesas pré-definidas, como planos de assinaturas de streaming e outros serviços, que os usuários podem selecionar em vez de digitar manualmente os valores. Isso simplifica o processo de registro de despesas e agiliza a inserção de informações financeiras.  
+
 * Os usuários podem criar grupos personalizados, definindo um nome e uma descrição para o grupo. 
 
-* Os usuários podem adicionar outros membros ao grupo, convidando-os através de e-mail ou nome de usuário. 
+    * Os usuários podem adicionar outros membros ao grupo, convidando-os através de e-mail ou nome de usuário. 
 
-* Membros do grupo podem registrar suas despesas pessoais, incluindo o valor da despesa, categoria e descrição. 
+    * Membros do grupo podem registrar suas despesas pessoais, incluindo o valor da despesa, categoria e descrição. 
+
+    * Quando um membro registra uma despesa, ele tem a possibilidade de compartilhar com o grupo para acompanhamento. 
+
+* Permitir que os usuários definam níveis de acesso aos detalhes dos gastos e outros membros do grupo.
+
+* Criar uma interface simples e fácil de usar, com design responsivo para dispositivos móveis.
+
+* Enviar notificações quando novos gastos forem registrados ou houver atualizações importantes no grupo.
 
 * O aplicativo se integra às APIs dos bancos para receber notificações de transações financeiras, como compras, transferências e pagamentos. 
 
-* O aplicativo lê as notificações recebidas do banco e identifica as informações relevantes, como valor, data, categoria de gasto e descrição. 
+    * O aplicativo lê as notificações recebidas do banco e identifica as informações relevantes, como valor, data, categoria de gasto e descrição. 
 
-* Quando um membro registra uma despesa, ele tem a possibilidade de compartilhar com o grupo para acompanhamento. 
+* Os pais ou responsáveis podem criar **perfis Kids** vinculados às suas contas de usuário.
+
+    * O perfil Kids possui uma interface visualmente atrativa e adaptada para crianças.
+
+    * As crianças podem definir metas simples de economia para itens que desejam comprar no futuro.
+
+    * Conforme as crianças atingem metas de economia ou completam atividades, elas ganham recompensas virtuais.
+
+    * O perfil Kids tem acesso restrito a determinadas funcionalidades, impedindo ações que possam comprometer as finanças.
+
+    * Os pais têm acesso a um painel para visualizar as atividades do perfil Kids, incentivando interações e acompanhamento.
+
+    * **Gamificação:** Os jogos e recompensas incentivam a participação ativa das crianças na aprendizagem financeira.
