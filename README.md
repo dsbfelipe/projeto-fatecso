@@ -29,7 +29,7 @@ O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar s
 
     4- Monitoramento Simplificado: A funcionalidade de extrato das transações oferece uma visão geral e panorâmica das finanças coletivas, facilitando o monitoramento do fluxo de dinheiro e permitindo ajustes conforme necessário. 
 
-Em síntese, o Porkin é uma ferramenta eficaz para aliviar os desafios do controle financeiro compartilhado, oferecendo uma abordagem estruturada e transparente para gerenciar as finanças de famílias e grupos residenciais.
+    Em síntese, o Porkin é uma ferramenta eficaz para aliviar os desafios do controle financeiro compartilhado, oferecendo uma abordagem estruturada e transparente para gerenciar as finanças de famílias e grupos residenciais.
 
 * **Formas de Monetização:**  
 
