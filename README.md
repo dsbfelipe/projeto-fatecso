@@ -10,19 +10,19 @@
 
 ## Resumo Sistema de Gestão Financeira Coletiva:
 
-O aplicativo Porkin foi desenvolvido para simplificar o controle financeiro compartilhado em residências. Com esta plataforma, os usuários podem facilmente administrar as finanças coletivas do lar de forma eficiente. Iniciar a gestão é simples: um membro do grupo cria uma unidade familiar e pode adicionar até três integrantes gratuitamente. Cada participante obtém sua própria seção para administrar suas finanças pessoais, a qual também é acessível aos outros membros do grupo. Notificações bancárias das transações realizadas por qualquer usuário são lidas e ele poderá escolher se deseja ou não adicionar o valor no registro coletivo.  
+<p style="text-align:justify;text-indent:20px">O aplicativo Porkin foi desenvolvido para simplificar o controle financeiro compartilhado em residências. Com esta plataforma, os usuários podem facilmente administrar as finanças coletivas do lar de forma eficiente. Iniciar a gestão é simples: um membro do grupo cria uma unidade familiar e pode adicionar até três integrantes gratuitamente. Cada participante obtém sua própria seção para administrar suas finanças pessoais, a qual também é acessível aos outros membros do grupo. Notificações bancárias das transações realizadas por qualquer usuário são lidas e ele poderá escolher se deseja ou não adicionar o valor no registro coletivo.</p>
 
-Uma característica fundamental do Porkin é a capacidade de categorizar cada transação. Por exemplo, um gasto de R$15 em um Pet Shop pode ser devidamente categorizado, tornando mais claro o destino dos recursos. Ao acumular informações de compra e venda, o aplicativo proporciona uma visão aprofundada das despesas de cada membro e do grupo como um todo. Essa abordagem auxilia a identificar padrões de gastos e oportunidades de economia. 
+<p style="text-align:justify;">Uma característica fundamental do Porkin é a capacidade de categorizar cada transação. Por exemplo, um gasto de R$15 em um Pet Shop pode ser devidamente categorizado, tornando mais claro o destino dos recursos. Ao acumular informações de compra e venda, o aplicativo proporciona uma visão aprofundada das despesas de cada membro e do grupo como um todo. Essa abordagem auxilia a identificar padrões de gastos e oportunidades de economia.</p>
 
-Para a análise geral, o aplicativo apresenta uma aba dedicada ao extrato das transações do grupo, promovendo uma visão panorâmica e abrangente das finanças coletivas. Através dessa funcionalidade, os usuários podem monitorar o fluxo de dinheiro de maneira mais ampla e tomar decisões informadas para a gestão financeira geral do lar.  
+<p style="text-align:justify;">Para a análise geral, o aplicativo apresenta uma aba dedicada ao extrato das transações do grupo, promovendo uma visão panorâmica e abrangente das finanças coletivas. Através dessa funcionalidade, os usuários podem monitorar o fluxo de dinheiro de maneira mais ampla e tomar decisões informadas para a gestão financeira geral do lar.</p>  
 
 * **Público Alvo:** 
 
-O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar seu controle financeiro coletivo. Ele é especialmente útil para famílias numerosas, casas compartilhadas, e grupos que buscam manter um registro organizado das despesas conjuntas. 
+<p style="text-align:justify;">O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar seu controle financeiro coletivo. Ele é especialmente útil para famílias numerosas, casas compartilhadas, e grupos que buscam manter um registro organizado das despesas conjuntas.</p>
 
 * **Principais Dores Resolvidas pelo Projeto:** 
 
-    1- Desafio no Controle Financeiro Coletivo:  O projeto atende à necessidade de famílias e grupos residenciais que enfrentam dificuldades na administração de finanças compartilhadas. Com o Porkin, as complexidades do gerenciamento conjunto são simplificadas. 
+    <p style="text-align:justify;">1- Desafio no Controle Financeiro Coletivo:  O projeto atende à necessidade de famílias e grupos residenciais que enfrentam dificuldades na administração de finanças compartilhadas. Com o Porkin, as complexidades do gerenciamento conjunto são simplificadas. </p>
 
     2- Falta de Transparência: Muitas vezes, a falta de clareza nas transações e gastos compartilhados pode gerar conflitos. O aplicativo resolve esse problema ao permitir a categorização detalhada das transações, garantindo uma visão transparente das despesas. 
 
