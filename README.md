@@ -74,12 +74,15 @@ O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar s
     * Os pais têm acesso a um painel para visualizar as atividades do perfil Kids, incentivando interações e acompanhamento.
 
     * **Gamificação:** Os jogos e recompensas incentivam a participação ativa das crianças na aprendizagem financeira.
+    <br>
 
-    ## Diagramas:
-    ### Casos de uso:
+    ## Diagrama de casos de uso:
 
     <img width="100%" src="documentation/use-cases.drawio.svg" alt="Use Cases">
 
+    <br>
+
+    ## Modelo conceitual:
     <picture width="100%">
     <source media="(prefers-color-scheme: dark)" srcset="documentation/concept-model-dark.drawio.svg" />
     <source media="(prefers-color-scheme: light)" srcset="documentation/concept-model-light.drawio.svg" />
