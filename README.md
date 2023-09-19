@@ -80,5 +80,9 @@ O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar s
 
     <img width="100%" src="documentation/use-cases.drawio.svg" alt="Use Cases">
 
-    <img src="documentation/conceptual-data-model.drawio.svg" alt="Use Cases">
+    <picture width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="documentation/concept-model-dark.drawio.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="documentation/concept-model-light.drawio.svg" />
+    <img>
+    </picture>
 
