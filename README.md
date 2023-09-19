@@ -82,7 +82,7 @@ O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar s
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="documentation/use-cases-dark.drawio.svg" />
 <source media="(prefers-color-scheme: light)" srcset="documentation/use-cases-light.drawio.svg" />
- <img>
+ <img width="100%">
 </picture>
 
 <br>
@@ -93,6 +93,6 @@ O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar s
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="documentation/concept-model-dark.drawio.svg" />
 <source media="(prefers-color-scheme: light)" srcset="documentation/concept-model-light.drawio.svg" />
-<img>
+<img width="100%">
 </picture>
 
