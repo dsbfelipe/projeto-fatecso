@@ -1,6 +1,5 @@
 #  **Porkin** - Sistema de Gestão Financeira Coletiva 
 
-
 **Projeto:** Porkin - Controle de gestão financeira coletiva.  
 
 **Membros:** Felipe dos Santos Bento, Lauri Ellen Santinelli Biral e Mariana Parducci. 
@@ -78,24 +77,22 @@ O Porkin é direcionado a famílias e grupos residenciais que desejam otimizar s
     * **Gamificação:** Os jogos e recompensas incentivam a participação ativa das crianças na aprendizagem financeira.
     <br>
 
-    ## Diagrama de casos de uso:
-    <br>
-    <nr>
+## Diagrama de casos de uso:
+<br>    
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="documentation/use-cases-dark.drawio.svg" />
+<source media="(prefers-color-scheme: light)" srcset="documentation/use-cases-light.drawio.svg" />
+ <img>
+</picture>
 
-    <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="documentation/use-cases-dark.drawio.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="documentation/use-cases-light.drawio.svg" />
-    <img>
-    </picture>
+<br>
+<br>
 
-    <br>
-    <br>
-
-    ## Modelo conceitual:
-    <br>
-    <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="documentation/concept-model-dark.drawio.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="documentation/concept-model-light.drawio.svg" />
-    <img>
-    </picture>
+## Modelo conceitual:
+<br>
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="documentation/concept-model-dark.drawio.svg" />
+<source media="(prefers-color-scheme: light)" srcset="documentation/concept-model-light.drawio.svg" />
+<img>
+</picture>
 
