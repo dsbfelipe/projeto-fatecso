@@ -96,3 +96,11 @@
 <img width="100%">
 </picture>
 
+## Protótipo em baixa fidelidade:
+<br>
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="documentation/Prototype.svg" />
+<source media="(prefers-color-scheme: light)" srcset="documentation/Prototype.svg" />
+<img width="100%">
+</picture>
+
