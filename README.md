@@ -34,9 +34,9 @@
 
 * **Formas de Monetização:**  
 
-    * Possibilidade de adicionar mais de 4 membros: Pagamento de Taxa 
+    * Possibilidade de adicionar mais de 4 membros: Pagamento de Taxa (R$9,90).
 
-    * Possibilidade de remover anúncios: Assinatura Mensal. 
+    * Possibilidade de se tornar um membro PRO: sem anúncios, criar mais do que 2 grupos e adicionar mais de 4 membros (R$4,00).
 
 ## Requisitos da primeira versão (MVP): 
 
