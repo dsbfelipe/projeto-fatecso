@@ -36,7 +36,7 @@
 
     * Possibilidade de adicionar mais de 4 membros: Pagamento de Taxa (R$9,90).
 
-    * Possibilidade de se tornar um membro PRO: sem anúncios, criar mais do que 2 grupos e adicionar mais de 4 membros (R$4,00).
+    * Possibilidade de se tornar um membro PRO: sem anúncios, criar mais do que 2 grupos e adicionar mais de 4 membros (R$4,00/mês).
 
 ## Requisitos da primeira versão (MVP): 
 
