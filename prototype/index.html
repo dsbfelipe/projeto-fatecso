@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <div class="max-w-sm">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Mobile com Tailwind</title>
-  </div>
+  <!-- Link para o CDN do Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="max-w-sm">
-  <div class="container mx-auto">
-    <header class="py-8 px-4">
-      <h1 class="text-2xl text-center">Minha página de mobile</h1>
-    </header>
-    <main class="py-8 px-4">
+<body class="flex justify-center items-center h-screen bg-gray-100">
+  <div class="max-w-sm w-full">
+        <main class="py-8 px-4">
       <section class="flex flex-col">
         <h2 class="text-lg mb-4">Pessoal</h2>
         <form class="flex flex-col">
@@ -43,7 +38,7 @@
             </label>
             
           </div>
-          <div class="max-w-sm">
+          <div class="flex items-center justify-center space-x-4">
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
           </div>
@@ -51,15 +46,12 @@
       </section>
     </main>
     <footer class="py-4 px-4">
-      <div class="max-w-sm">
-           <div class="flex flex-row justify-center">
+      <div class="flex flex-row justify-center">
         <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mr-2">Início</a>
         <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mr-2">Grupos</a>
         <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded">Extrato</a>
-        </div>
       </div>
     </footer>
-  </div>
   </div>
 </body>
 </html>
