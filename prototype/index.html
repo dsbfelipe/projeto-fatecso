@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link para o CDN do Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body class="flex justify-center items-center h-screen bg-gray-100">
   <div class="max-w-sm w-full">
-        <main class="py-8 px-4">
+    <main class="py-8 px-4">
       <section class="flex flex-col">
-        <p class="text-lg mb-4 border-4 border-spacing-1 border-black rounded-full p-2">
-           Pessoal</p>
+        <p class="flex items-center text-lg mb-4 border-4 border-spacing-1 border-black rounded-full p-2">
+          <span class="mr-auto">Pessoal</span>
+          <button type="button" class="inline-block text-sm mr-3">
+            <span class="text-gray-700">+</span>
+          </button>
+        </p>          
         <form class="flex flex-col">
           <div class="mb-4">
             <label for="inputValor" class="block text-sm">Valor</label>
@@ -44,11 +50,11 @@
 
           </div>
           <div class="mb-4">
-           <label for="inputRecorrente" class="inline-block text-sm">
-           <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
-             Recorrente
+            <label for="inputRecorrente" class="inline-block text-sm">
+              <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
+              Recorrente
             </label>
-            
+
           </div>
           <div class="flex items-center justify-center space-x-4">
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
@@ -67,4 +73,5 @@
     </footer>
   </div>
 </body>
+
 </html>
