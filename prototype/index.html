@@ -10,7 +10,7 @@
   <div class="max-w-sm w-full">
         <main class="py-8 px-4">
       <section class="flex flex-col">
-        <p class="text-lg mb-4 border-4 border-spacing-1 border-black rounded-full p-4">
+        <p class="text-lg mb-4 border-4 border-spacing-1 border-black rounded-full p-2">
            Pessoal</p>
         <form class="flex flex-col">
           <div class="mb-4">
@@ -19,7 +19,7 @@
           </div>
           <div class="mb-4">
             <label for="inputDescricao" class="block text-sm">Descrição</label>
-            <input type="text" id="inputDescricao" class="w-full form-control">
+            <input type="text" id="inputDescricao" class="w-full form-control" placeholder="Adicionar descrição">
           </div>
           <div class="mb-4">
             <label for="inputCategoria" class="block text-sm">Categoria</label>
@@ -34,7 +34,14 @@
           </div>
           <div class="mb-4">
             <label for="inputDividirCom" class="block text-sm">Dividir com</label>
-            <input type="text" id="inputDividirCom" class="w-full form-control">
+            <select id="inputDividirCom" class="w-full form-control" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="1">Pessoal</option>
+              <option value="2">Grupo Família</option>
+              <option value="2">Churrasco Fim de ano</option>
+              <option value="2">Mãe</option>
+              <option value="2">Pai</option>
+
           </div>
           <div class="mb-4">
            <label for="inputRecorrente" class="inline-block text-sm">
