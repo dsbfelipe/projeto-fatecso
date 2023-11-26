@@ -118,46 +118,50 @@
         </div>
 
         <script>
-          document.addEventListener('DOMContentLoaded', function() {
-    const frequencySelect = document.getElementById('frequency');
-    const dateInput = document.getElementById('customDate');
-    const checkboxRecorrente = document.getElementById('inputRecorrente');
-    const recurrentOptions = document.querySelector('.recurrent-options');
-  
-    // Initially hide the recurrent options
-    recurrentOptions.style.display = 'none';
-  
-    // Seleciona a data corrente por default
-    dateInput.value = new Date().toISOString().split('T')[0];
-  
-    frequencySelect.addEventListener('change', function() {
-      const frequency = this.value;
-      if (frequency === 'daily') {
-        dateInput.readOnly = true;
-        recurrentOptions.style.display = checkboxRecorrente.checked ? 'block' : 'none';
-      } else {
-        dateInput.readOnly = false;
-        recurrentOptions.style.display = checkboxRecorrente.checked ? 'block' : 'none';
-      }
-    });
-  
-    checkboxRecorrente.addEventListener('change', function() {
-      recurrentOptions.style.display = this.checked ? 'block' : 'none';
-  
-      // Se não estiver selecionado, redefina o modelo
-      if (!this.checked) {
-        Alpine.data('recurrentOptions').selectedFrequency = 'every-15-days';
-      }
-    });
-  });
+          document.addEventListener('DOMContentLoaded', function () {
+            const frequencySelect = document.getElementById('frequency');
+            const dateInput = document.getElementById('customDate');
+            const checkboxRecorrente = document.getElementById('inputRecorrente');
+            const recurrentOptions = document.querySelector('.recurrent-options');
+
+            // Initially hide the recurrent options
+            recurrentOptions.style.display = 'none';
+
+            // Seleciona a data corrente por default
+            dateInput.value = new Date().toISOString().split('T')[0];
+
+            frequencySelect.addEventListener('change', function () {
+              const frequency = this.value;
+              if (frequency === 'daily') {
+                dateInput.readOnly = true;
+                recurrentOptions.style.display = checkboxRecorrente.checked ? 'block' : 'none';
+              } else {
+                dateInput.readOnly = false;
+                recurrentOptions.style.display = checkboxRecorrente.checked ? 'block' : 'none';
+              }
+            });
+
+            checkboxRecorrente.addEventListener('change', function () {
+              recurrentOptions.style.display = this.checked ? 'block' : 'none';
+
+              // Se não estiver selecionado, redefina o modelo
+              if (!this.checked) {
+                Alpine.data('recurrentOptions').selectedFrequency = 'every-15-days';
+              }
+            });
+          });
         </script>
-
-
-
-
-
       </div>
+      <style>
+        .recurrent-options {
+          margin-top: 10px;
+        }
 
+        #frequency,
+        #customDate {
+          width: 100%;
+        }
+      </style>
 
       <div class="flex items-center justify-center space-x-4">
         <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
