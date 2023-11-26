@@ -17,18 +17,22 @@
       display: none;
     }
   </style>
+
 </head>
 
 <body class="flex justify-center items-center h-screen bg-gray-100">
   <div class="max-w-sm w-full">
     <main class="py-8 px-4">
       <section class="flex flex-col">
-        <p class="flex items-center text-lg mb-4 border-2 border-spacing-1 border-black rounded-full p-1">
-          <span class="mr-auto">Grupo Família</span>
-          <button type="button" class="inline-block text-sm mr-3">
-            <span class="text-gray-700">+</span>
-          </button>
-        </p>
+        <div class="relative mb-4">
+          
+          <select id="inputPerfil" class="w-full form-control border-2 border-spacing-1 border-black rounded-full p-1">
+            <option value="1">Grupo Família</option>
+            <option value="2">Pessoal</option>
+            <option value="3">Churrasco fim de ano</option>
+            <option value="4">Viagem Praia</option>
+          </select>
+        </div>
         <form class="flex flex-col">
           <div class="mb-4">
             <label for="inputValor" class="block text-sm">Valor</label>
