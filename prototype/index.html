@@ -119,8 +119,7 @@
         <div class="flex items-center justify-center space-x-4">
           <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
           <script>
-            const resetButton = document.getElementById('resetButton');
-          
+           const resetButton = document.getElementById('resetButton');
             resetButton.addEventListener('click', () => {
               const formElements = document.querySelectorAll('input, select');
               for (const element of formElements) {
@@ -132,6 +131,14 @@
                   element.selectedIndex = 0;
                 }
               }
+
+              // Clear the selected frequency option
+              const frequencySelect = document.getElementById('frequency');
+              frequencySelect.selectedIndex = 0;
+
+              // Clear the custom date
+              const customDateInput = document.getElementById('customDate');
+              customDateInput.value = '';
             });
           </script>
           
