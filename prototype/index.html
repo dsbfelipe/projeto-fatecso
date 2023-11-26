@@ -123,21 +123,24 @@
       </div>
 
       <script>
-        const frequencySelect = document.getElementById('frequency');
-        const dateInput = document.getElementById('customDate');
+        document.addEventListener('DOMContentLoaded', function () {
+          const frequencySelect = document.getElementById('frequency');
+          const dateInput = document.getElementById('customDate');
       
-        frequencySelect.addEventListener('change', function () {
-          const frequency = this.value;
-          if (frequency === 'daily') {
-            dateInput.readOnly = true;
-            dateInput.value = new Date();
-          } else {
-            dateInput.readOnly = false;
-            dateInput.value = '';
-          }
+          frequencySelect.addEventListener('change', function () {
+            const frequency = this.value;
+            if (frequency === 'daily') {
+              dateInput.readOnly = true;
+              dateInput.value = '';
+              recurrentOptions.style.display = 'none';
+            } else {
+              dateInput.readOnly = false;
+              dateInput.value = new Date().toISOString().split('T')[0];
+            }
+          });
+             
         });
       </script>
-      
       
 
     </div>
