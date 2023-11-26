@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js"
     integrity="sha256-2C2ejegpyniFQusEjeCqVV2XhIckovh2IqC+KGMNKT0=" crossorigin="anonymous"></script>
-  <title>Opções Recorrentes</title>
+  <title>Porkin - Adicione Transação</title>
   <style>
     .recurrent-options {
       display: none;
@@ -24,7 +24,7 @@
     <main class="py-8 px-4">
       <section class="flex flex-col">
         <p class="flex items-center text-lg mb-4 border-2 border-spacing-1 border-black rounded-full p-1">
-          <span class="mr-auto">Grupo Família</span>
+          <img src="images/community.png" class="mr-2"><span class="mr-auto">Grupo Família</span>
           <button type="button" class="inline-block text-sm mr-3">
             <span class="text-gray-700">+</span>
           </button>
@@ -91,39 +91,30 @@
               </li>
 
             </ul>
-          </div>
+          </div><br>
 
           <div class="mb-4 mt-2">
-            <label for="inputRecorrente" class="inline-block text-sm">
+            <label for="inputRecorrente" class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
               <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
               Recorrente
             </label>
-
+            
             <div class="recurrent-options" x-show="recorrente">
               <label for="frequency">Escolha a frequência:</label>
               <select id="frequency" class="form-control">
                 <option value="daily">Todo dia</option>
-                <option value="monthly">Mensal</option>
+                <option value="monthly">Mensalmente</option>
                 <option value="every-15-days">A cada 15 dias</option>
                 <option value="every-7-days">A cada 7 dias</option>
+                <option value="every-7-days">Anualmente</option>
               </select>
               <br>
               <label for="customDate">Data personalizada:</label>
-              <div>
-                <label>
-                  <input type="radio" name="customDateOption" value="first-selection" checked>
-                  Primeira seleção
-                </label>
-                <label>
-                  <input type="radio" name="customDateOption" value="second-selection">
-                  Segunda seleção
-                </label>
-              </div>
 
               <input type="date" id="customDate" class="form-control" x-show="customDateOption === 'second-selection'">
             </div>
           </div>
-        </form>
+        </form><br>
 
         <div class="flex items-center justify-center space-x-4">
           <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
