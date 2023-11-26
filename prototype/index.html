@@ -24,7 +24,7 @@
     <main class="py-8 px-4">
       <section class="flex flex-col">
         <p class="flex items-center text-lg mb-4 border-2 border-spacing-1 border-black rounded-full p-1">
-          <img src="images/community.png" class="mr-2"><span class="mr-auto">Grupo Família</span>
+          <span class="mr-auto">Grupo Família</span>
           <button type="button" class="inline-block text-sm mr-3">
             <span class="text-gray-700">+</span>
           </button>
@@ -143,33 +143,29 @@
           </script>
           
           <button type="button" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
+            <script>
+              const submitButton = document.getElementById('submitButton');
+              const formElements = document.querySelectorAll('input, select');
 
-<script>
-  const submitButton = document.getElementById('submitButton');
-  const formElements = document.querySelectorAll('input, select');
+              submitButton.addEventListener('click', () => {
+                let formIsEmpty = false;
 
-  submitButton.addEventListener('click', () => {
-    let formIsEmpty = false;
-
-    for (const element of formElements) {
-      if (
-        (element.type === 'text' && element.value === '') ||
-        (element.type === 'select' && element.selectedIndex === 0)
-      ) {
-        formIsEmpty = true;
-        break;
-      }
-    }
-
-    if (formIsEmpty) {
-      alert('Por favor preencha todos os campos');
-      return;
-    }
-
-    // Submit the form or display success message
-    alert('Transação adicionada com sucesso!');
-  });
-</script>
+                for (const element of formElements) {
+                  if (
+                    (element.type === 'text' && element.value === '') ||
+                    (element.type === 'select' && element.selectedIndex === 0)
+                  ) {
+                    formIsEmpty = true;
+                    break;
+                  }
+                }
+                if (formIsEmpty) {
+                  alert('Por favor preencha todos os campos');
+                  return;
+                }
+                alert('Transação adicionada com sucesso!');
+              });
+            </script>
 
         </div>
       </section>
