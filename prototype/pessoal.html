@@ -16,6 +16,7 @@
     .recurrent-options {
       display: none;
     }
+
     .button-container {
       display: flex;
       justify-content: center;
@@ -32,198 +33,202 @@
       <option value="3">Churrasco fim de ano</option>
       <option value="4">Viagem Praia</option>
     </select>
-  </section>
-  
-  <script>
-    const inputPerfil = document.getElementById('inputPerfil');
-  
-    inputPerfil.addEventListener('change', (event) => {
-      const perfilSelecionado = event.target.value;
-  
-      if (perfilSelecionado === '1') {
-        // Redireciona para outro índice
-        window.location.href = 'pessoal.html';
-      }
-      if (perfilSelecionado === '2') {
-        // Redireciona para outro índice
-        window.location.href = 'index.html';
-      }
-      if (perfilSelecionado === '3') {
-        // Redireciona para outro índice
-        window.location.href = 'index.html';
-      }
-      if (perfilSelecionado === '4') {
-        // Redireciona para outro índice
-        window.location.href = 'index.html';
-      }
-    });
-  </script>
-  
-
-  <form class="flex flex-col">
-    <div class="mb-4">
-      <label for="inputValor" class="block text-sm ">Valor</label>
-      <input type="text" id="inputValor" class="w-full form-control text-right border border-gray-300 rounded-md py-1"
-        inputmode="numeric">
-    </div>
+    </section>
 
     <script>
-      document.getElementById('inputValor').addEventListener('input', function (event) {
-        let inputValue = event.target.value;
-        inputValue = inputValue.replace(/[^0-9]/g, '');
-        inputValue = (Number(inputValue) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-        event.target.value = inputValue;
+      const inputPerfil = document.getElementById('inputPerfil');
+
+      inputPerfil.addEventListener('change', (event) => {
+        const perfilSelecionado = event.target.value;
+
+        if (perfilSelecionado === '1') {
+          // Redireciona para outro índice
+          window.location.href = 'pessoal.html';
+        }
+        if (perfilSelecionado === '2') {
+          // Redireciona para outro índice
+          window.location.href = 'index.html';
+        }
+        if (perfilSelecionado === '3') {
+          // Redireciona para outro índice
+          window.location.href = 'index.html';
+        }
+        if (perfilSelecionado === '4') {
+          // Redireciona para outro índice
+          window.location.href = 'index.html';
+        }
       });
     </script>
 
-    <div class="mb-4">
-      <label for="inputDescricao" class="block text-sm">Descrição</label>
-      <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
-        placeholder="Adicionar descrição">
-    </div>
-    <div class="mb-4">
-      <label for="inputCategoria" class="block text-sm">Categoria</label>
-      <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1" required>
-        <option value="" disabled selected>Selecione uma categoria</option>
-        <option value="1">Alimentação</option>
-        <option value="2">Lazer</option>
-        <option value="3">Moradia</option>
-        <option value="4">Transporte</option>
-        <option value="5">Viagens</option>
-      </select>
-    </div>
 
-    <div class="mb-4 mt-2">
-      <label for="inputRecorrente"
-        class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
-        <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
-        Recorrente
-      </label>
-
-      <div class="recurrent-options" x-show="recorrente">
-        <label for="frequency">Escolha a frequência:</label>
-        <select id="frequency" class="form-control" x-model="selectedFrequency">
-          <option value="every-15-days">A cada 15 dias</option>
-          <option value="every-7-days">A cada 7 dias</option>
-          <option value="monthly">Mensalmente</option>
-          <option value="daily">Todo dia</option>
-          <option value="annually">Anualmente</option>
-        </select>
-        <br>
-
-        <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
-        <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'" :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
+    <form class="flex flex-col">
+      <div class="mb-4">
+        <label for="inputValor" class="block text-sm ">Valor</label>
+        <input type="text" id="inputValor" class="w-full form-control text-right border border-gray-300 rounded-md py-1"
+          inputmode="numeric">
       </div>
 
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-  const frequencySelect = document.getElementById('frequency');
-  const dateInput = document.getElementById('customDate');
-  const checkboxRecorrente = document.getElementById('inputRecorrente');
-  const recurrentOptions = document.querySelector('.recurrent-options');
-
-  // Seleciona a data corrente por default
-  dateInput.value = new Date().toISOString().split('T')[0];
-
-  frequencySelect.addEventListener('change', function () {
-    const frequency = this.value;
-    if (frequency === 'daily') {
-      dateInput.readOnly = true;
-      recurrentOptions.style.display = 'block';
-    } else {
-      dateInput.readOnly = false;
-      recurrentOptions.style.display = checkboxRecorrente.checked || frequency !== 'daily' ? 'block' : 'none';
-    }
-  });
-
-  checkboxRecorrente.addEventListener('change', function () {
-    recurrentOptions.style.display = this.checked || frequencySelect.value !== 'daily' ? 'block' : 'none';
-
-    // Se não estiver selecionado, redefina o modelo
-    if (!this.checked) {
-      Alpine.data('recurrentOptions').selectedFrequency = 'every-15-days';
-    }
-  });
-});
+        document.getElementById('inputValor').addEventListener('input', function (event) {
+          let inputValue = event.target.value;
+          inputValue = inputValue.replace(/[^0-9]/g, '');
+          inputValue = (Number(inputValue) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          event.target.value = inputValue;
+        });
       </script>
-      
-      
-      
-      
-      
-    </div>
-      
 
-  <div class="flex items-center justify-center space-x-4">
-    <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
-    <script>
-      const resetButton = document.getElementById('resetButton');
-      resetButton.addEventListener('click', () => {
-        const formElements = document.querySelectorAll('input, select');
-        for (const element of formElements) {
-          if (element.type === 'text') {
-            element.value = '';
-          } else if (element.type === 'checkbox') {
-            element.checked = false;
-          } else if (element.type === 'select') {
-            element.selectedIndex = 0;
-          }
-        }
+      <div class="mb-4">
+        <label for="inputDescricao" class="block text-sm">Descrição</label>
+        <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
+          placeholder="Adicionar descrição">
+      </div>
+      <div class="mb-4">
+        <label for="inputCategoria" class="block text-sm">Categoria</label>
+        <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1" required>
+          <option value="" disabled selected>Selecione uma categoria</option>
+          <option value="1">Alimentação</option>
+          <option value="2">Lazer</option>
+          <option value="3">Moradia</option>
+          <option value="4">Transporte</option>
+          <option value="5">Viagens</option>
+        </select>
+      </div>
 
-        // Clear the selected frequency option
-        const frequencySelect = document.getElementById('frequency');
-        frequencySelect.selectedIndex = 0;
+      <div class="mb-4 mt-2">
+        <label for="inputRecorrente"
+          class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
+          <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
+          Recorrente
+        </label>
 
-        // Clear the custom date
-        const customDateInput = document.getElementById('customDate');
-        customDateInput.value = '';
-      });
-    </script>
+        <div class="recurrent-options" x-show="recorrente">
+          <label for="frequency">Escolha a frequência:</label>
+          <select id="frequency" class="form-control" x-model="selectedFrequency">
+            <option value="every-15-days">A cada 15 dias</option>
+            <option value="every-7-days">A cada 7 dias</option>
+            <option value="monthly">Mensalmente</option>
+            <option value="daily">Todo dia</option>
+            <option value="annually">Anualmente</option>
+          </select>
+          <br>
+
+          <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
+          <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'"
+            :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    const frequencySelect = document.getElementById('frequency');
+    const dateInput = document.getElementById('customDate');
+    const checkboxRecorrente = document.getElementById('inputRecorrente');
+    const recurrentOptions = document.querySelector('.recurrent-options');
+  
+    // Initially hide the recurrent options
+    recurrentOptions.style.display = 'none';
+  
+    // Seleciona a data corrente por default
+    dateInput.value = new Date().toISOString().split('T')[0];
+  
+    frequencySelect.addEventListener('change', function() {
+      const frequency = this.value;
+      if (frequency === 'daily') {
+        dateInput.readOnly = true;
+        recurrentOptions.style.display = checkboxRecorrente.checked ? 'block' : 'none';
+      } else {
+        dateInput.readOnly = false;
+        recurrentOptions.style.display = checkboxRecorrente.checked ? 'block' : 'none';
+      }
+    });
+  
+    checkboxRecorrente.addEventListener('change', function() {
+      recurrentOptions.style.display = this.checked ? 'block' : 'none';
+  
+      // Se não estiver selecionado, redefina o modelo
+      if (!this.checked) {
+        Alpine.data('recurrentOptions').selectedFrequency = 'every-15-days';
+      }
+    });
+  });
+        </script>
 
 
-    <button type="button" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
-    <script>
-      const submitButton = document.getElementById('submitButton');
-      const formElements = document.querySelectorAll('input, select');
 
-      submitButton.addEventListener('click', () => {
-        let formIsEmpty = false;
 
-        for (const element of formElements) {
-          if (
-            (element.type === 'text' && element.value === '') ||
-            (element.type === 'select' && element.selectedIndex === 0)
-          ) {
-            formIsEmpty = true;
-            break;
-          }
-        }
-        if (formIsEmpty) {
-          alert('Por favor preencha todos os campos');
-          return;
-        }
-        alert('Transação adicionada com sucesso!');
-      });
-    </script>
 
-  </div>
-  </section>
-  </main>
-  <footer class="py-4 px-4 flex justify-center">
-    <div class="flex flex-row items-center space-x-32">
-      <button class="icon-button">
-        <img src="images/house.png" class="mr-2">
-      </button>
+      </div>
 
-      <button class="icon-button">
-        <img src="images/love.png" class="mr-2">
-      </button>
 
-      <button class="icon-button">
-        <img src="images/plus.png" class="mr-2">
-      </button>
-    </div>
-  </footer>
+      <div class="flex items-center justify-center space-x-4">
+        <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
+        <script>
+          const resetButton = document.getElementById('resetButton');
+          resetButton.addEventListener('click', () => {
+            const formElements = document.querySelectorAll('input, select');
+            for (const element of formElements) {
+              if (element.type === 'text') {
+                element.value = '';
+              } else if (element.type === 'checkbox') {
+                element.checked = false;
+              } else if (element.type === 'select') {
+                element.selectedIndex = 0;
+              }
+            }
+
+            // Clear the selected frequency option
+            const frequencySelect = document.getElementById('frequency');
+            frequencySelect.selectedIndex = 0;
+
+            // Clear the custom date
+            const customDateInput = document.getElementById('customDate');
+            customDateInput.value = '';
+          });
+        </script>
+
+
+        <button type="button" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
+        <script>
+          const submitButton = document.getElementById('submitButton');
+          const formElements = document.querySelectorAll('input, select');
+
+          submitButton.addEventListener('click', () => {
+            let formIsEmpty = false;
+
+            for (const element of formElements) {
+              if (
+                (element.type === 'text' && element.value === '') ||
+                (element.type === 'select' && element.selectedIndex === 0)
+              ) {
+                formIsEmpty = true;
+                break;
+              }
+            }
+            if (formIsEmpty) {
+              alert('Por favor preencha todos os campos');
+              return;
+            }
+            alert('Transação adicionada com sucesso!');
+          });
+        </script>
+
+      </div>
+      </section>
+      </main>
+      <footer class="py-4 px-4 flex justify-center">
+        <div class="flex flex-row items-center space-x-32">
+          <button class="icon-button">
+            <img src="images/house.png" class="mr-2">
+          </button>
+
+          <button class="icon-button">
+            <img src="images/love.png" class="mr-2">
+          </button>
+
+          <button class="icon-button">
+            <img src="images/plus.png" class="mr-2">
+          </button>
+        </div>
+      </footer>
   </div>
 
   <script>
