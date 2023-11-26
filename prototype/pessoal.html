@@ -23,8 +23,10 @@
     }
   </style>
 </head>
+<body class="bg-gray-200 flex justify-center items-center h-screen">
+  <!-- Container com borda simulando um dispositivo móvel -->
+  <div class="border-2 border-black rounded-3xl p-4 max-w-md">
 
-<body class="flex justify-center items-center h-screen bg-gray-100"></body>
 <div class="max-w-sm w-full">
   <div class="flex justify-center">
     <img src="images/pessoal.png" alt="Imagem" >
@@ -45,19 +47,19 @@
         const perfilSelecionado = event.target.value;
 
         if (perfilSelecionado === '1') {
-          // Redireciona para outro índice
+      
           window.location.href = 'pessoal.html';
         }
         if (perfilSelecionado === '2') {
-          // Redireciona para outro índice
+         
           window.location.href = 'index.html';
         }
         if (perfilSelecionado === '3') {
-          // Redireciona para outro índice
+        
           window.location.href = 'index.html';
         }
         if (perfilSelecionado === '4') {
-          // Redireciona para outro índice
+          
           window.location.href = 'index.html';
         }
       });
@@ -127,10 +129,8 @@
             const checkboxRecorrente = document.getElementById('inputRecorrente');
             const recurrentOptions = document.querySelector('.recurrent-options');
 
-            // Initially hide the recurrent options
             recurrentOptions.style.display = 'none';
 
-            // Seleciona a data corrente por default
             dateInput.value = new Date().toISOString().split('T')[0];
 
             frequencySelect.addEventListener('change', function () {
@@ -252,6 +252,8 @@
       recurrentOptions.style.display = this.checked ? 'block' : 'none';
     });
   </script>
+  </div>
 </body>
+
 
 </html>
