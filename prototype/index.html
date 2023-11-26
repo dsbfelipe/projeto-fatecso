@@ -109,20 +109,39 @@
 
       <div class="recurrent-options" x-show="recorrente">
         <label for="frequency">Escolha a frequência:</label>
-        <select id="frequency" class="form-control">
+        <select id="frequency" class="form-control" x-model="selectedFrequency">
           <option value="daily">Todo dia</option>
           <option value="monthly">Mensalmente</option>
           <option value="every-15-days">A cada 15 dias</option>
           <option value="every-7-days">A cada 7 dias</option>
-          <option value="every-7-days">Anualmente</option>
+          <option value="annually">Anualmente</option>
         </select>
         <br>
-        <label for="customDate">Data:</label>
 
-        <input type="date" id="customDate" class="form-control" x-show="customDateOption === 'second-selection'">
+        <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
+        <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'" :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
       </div>
+
+      <script>
+        const frequencySelect = document.getElementById('frequency');
+        const dateInput = document.getElementById('customDate');
+      
+        frequencySelect.addEventListener('change', function () {
+          const frequency = this.value;
+          if (frequency === 'daily') {
+            dateInput.readOnly = true;
+            dateInput.value = new Date();
+          } else {
+            dateInput.readOnly = false;
+            dateInput.value = '';
+          }
+        });
+      </script>
+      
+      
+
     </div>
-  </form><br>
+      
 
   <div class="flex items-center justify-center space-x-4">
     <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
