@@ -117,7 +117,24 @@
         </form><br>
 
         <div class="flex items-center justify-center space-x-4">
-          <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
+          <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
+          <script>
+            const resetButton = document.getElementById('resetButton');
+          
+            resetButton.addEventListener('click', () => {
+              const formElements = document.querySelectorAll('input, select');
+              for (const element of formElements) {
+                if (element.type === 'text') {
+                  element.value = '';
+                } else if (element.type === 'checkbox') {
+                  element.checked = false;
+                } else if (element.type === 'select') {
+                  element.selectedIndex = 0;
+                }
+              }
+            });
+          </script>
+          
           <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
         </div>
       </section>
