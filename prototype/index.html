@@ -195,6 +195,7 @@
                 element.value = '';
               } else if (element.type === 'checkbox') {
                 element.checked = false;
+                document.querySelector('.recurrent-options').style.display = 'none';
               } else if (element.type === 'select') {
                 element.selectedIndex = 0;
               }
