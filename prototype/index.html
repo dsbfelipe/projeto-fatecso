@@ -142,7 +142,35 @@
             });
           </script>
           
-          <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
+          <button type="button" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
+
+<script>
+  const submitButton = document.getElementById('submitButton');
+  const formElements = document.querySelectorAll('input, select');
+
+  submitButton.addEventListener('click', () => {
+    let formIsEmpty = false;
+
+    for (const element of formElements) {
+      if (
+        (element.type === 'text' && element.value === '') ||
+        (element.type === 'select' && element.selectedIndex === 0)
+      ) {
+        formIsEmpty = true;
+        break;
+      }
+    }
+
+    if (formIsEmpty) {
+      alert('Por favor preencha todos os campos');
+      return;
+    }
+
+    // Submit the form or display success message
+    alert('Transação adicionada com sucesso!');
+  });
+</script>
+
         </div>
       </section>
     </main>
