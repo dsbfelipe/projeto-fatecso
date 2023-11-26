@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js"
     integrity="sha256-2C2ejegpyniFQusEjeCqVV2XhIckovh2IqC+KGMNKT0=" crossorigin="anonymous"></script>
-  <title>Opções Recorrentes</title>
+  <title>Porkin - Adicione Transação</title>
   <style>
     .recurrent-options {
       display: none;
@@ -31,8 +31,8 @@
         </p>
         <form class="flex flex-col">
           <div class="mb-4">
-            <label for="inputValor" class="block text-sm">Valor</label>
-            <input type="text" id="inputValor" class="w-full form-control text-right" inputmode="numeric">
+            <label for="inputValor" class="block text-sm ">Valor</label>
+            <input type="text" id="inputValor" class="w-full form-control text-right border border-gray-300 rounded-md py-1" inputmode="numeric">
           </div>
 
           <script>
@@ -46,11 +46,11 @@
 
           <div class="mb-4">
             <label for="inputDescricao" class="block text-sm">Descrição</label>
-            <input type="text" id="inputDescricao" class="w-full form-control" placeholder="Adicionar descrição">
+            <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1" placeholder="Adicionar descrição">
           </div>
           <div class="mb-4">
             <label for="inputCategoria" class="block text-sm">Categoria</label>
-            <select id="inputCategoria" class="w-full form-control" required>
+            <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1" required>
               <option value="" disabled selected>Selecione uma categoria</option>
               <option value="1">Alimentação</option>
               <option value="2">Lazer</option>
@@ -75,59 +75,98 @@
                 <input type="checkbox" id="check-all" /> Todos
               </li>
               <li>
-                <input type="checkbox" class="check-item" /> Mãe
+                <input type="checkbox" class="check-item" /> Roseli Oliveira
               </li>
               <li>
-                <input type="checkbox" class="check-item" /> Pai
+                <input type="checkbox" class="check-item" /> Celso Oliveira
               </li>
               <li>
-                <input type="checkbox" class="check-item" /> Tio
+                <input type="checkbox" class="check-item" /> Carlos Almeida
               </li>
               <li>
-                <input type="checkbox" class="check-item" /> Irmão
+                <input type="checkbox" class="check-item" /> João Almeida
               </li>
               <li>
-                <input type="checkbox" class="check-item" /> Tia
+                <input type="checkbox" class="check-item" /> Rute Silva
               </li>
 
             </ul>
-          </div>
+          </div><br>
 
           <div class="mb-4 mt-2">
-            <label for="inputRecorrente" class="inline-block text-sm">
+            <label for="inputRecorrente" class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
               <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
               Recorrente
             </label>
-
+            
             <div class="recurrent-options" x-show="recorrente">
               <label for="frequency">Escolha a frequência:</label>
               <select id="frequency" class="form-control">
                 <option value="daily">Todo dia</option>
-                <option value="monthly">Mensal</option>
+                <option value="monthly">Mensalmente</option>
                 <option value="every-15-days">A cada 15 dias</option>
                 <option value="every-7-days">A cada 7 dias</option>
+                <option value="every-7-days">Anualmente</option>
               </select>
               <br>
               <label for="customDate">Data personalizada:</label>
-              <div>
-                <label>
-                  <input type="radio" name="customDateOption" value="first-selection" checked>
-                  Primeira seleção
-                </label>
-                <label>
-                  <input type="radio" name="customDateOption" value="second-selection">
-                  Segunda seleção
-                </label>
-              </div>
 
               <input type="date" id="customDate" class="form-control" x-show="customDateOption === 'second-selection'">
             </div>
           </div>
-        </form>
+        </form><br>
 
         <div class="flex items-center justify-center space-x-4">
-          <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
-          <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
+          <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
+          <script>
+           const resetButton = document.getElementById('resetButton');
+            resetButton.addEventListener('click', () => {
+              const formElements = document.querySelectorAll('input, select');
+              for (const element of formElements) {
+                if (element.type === 'text') {
+                  element.value = '';
+                } else if (element.type === 'checkbox') {
+                  element.checked = false;
+                } else if (element.type === 'select') {
+                  element.selectedIndex = 0;
+                }
+              }
+
+              // Clear the selected frequency option
+              const frequencySelect = document.getElementById('frequency');
+              frequencySelect.selectedIndex = 0;
+
+              // Clear the custom date
+              const customDateInput = document.getElementById('customDate');
+              customDateInput.value = '';
+            });
+          </script>
+          
+          <button type="button" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
+            <script>
+              const submitButton = document.getElementById('submitButton');
+              const formElements = document.querySelectorAll('input, select');
+
+              submitButton.addEventListener('click', () => {
+                let formIsEmpty = false;
+
+                for (const element of formElements) {
+                  if (
+                    (element.type === 'text' && element.value === '') ||
+                    (element.type === 'select' && element.selectedIndex === 0)
+                  ) {
+                    formIsEmpty = true;
+                    break;
+                  }
+                }
+                if (formIsEmpty) {
+                  alert('Por favor preencha todos os campos');
+                  return;
+                }
+                alert('Transação adicionada com sucesso!');
+              });
+            </script>
+
         </div>
       </section>
     </main>
