@@ -251,9 +251,23 @@
             <img src="images/house.png" class="mr-2">
           </button>
 
-          <button class="icon-button">
-            <img src="images/love.png" class="mr-2">
-          </button>
+          <div class="max-w-md">
+            <!-- Imagem love -->
+            <img src="images/love.png" alt="Imagem 1" id="imagem" class="cursor-pointer transition duration-300 ease-in-out hover:shadow-md" onclick="trocarImagem()">
+          </div>
+        
+          <script>
+            function trocarImagem() {
+              var imagem = document.getElementById('imagem');
+        
+              // Verifica qual imagem está atualmente exibida e troca para a outra
+              if (imagem.src.includes('love.png')) {
+                imagem.src = 'images/love2.png';
+              } else {
+                imagem.src = 'images/love.png';
+              }
+            }
+          </script>
 
           <button class="icon-button">
             <img src="images/plus.png" class="mr-2">

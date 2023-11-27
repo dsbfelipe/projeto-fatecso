@@ -61,21 +61,8 @@
 * O aplicativo se integra às APIs dos bancos para receber notificações de transações financeiras, como compras, transferências e pagamentos. 
 
     * O aplicativo lê as notificações recebidas do banco e identifica as informações relevantes, como valor, data, categoria de gasto e descrição. 
-
-* Os pais ou responsáveis podem criar **perfis Kids** vinculados às suas contas de usuário.
-
-    * O perfil Kids possui uma interface visualmente atrativa e adaptada para crianças.
-
-    * As crianças podem definir metas simples de economia para itens que desejam comprar no futuro.
-
-    * Conforme as crianças atingem metas de economia ou completam atividades, elas ganham recompensas virtuais.
-
-    * O perfil Kids tem acesso restrito a determinadas funcionalidades, impedindo ações que possam comprometer as finanças.
-
-    * Os pais têm acesso a um painel para visualizar as atividades do perfil Kids, incentivando interações e acompanhamento.
-
-    * **Gamificação:** Os jogos e recompensas incentivam a participação ativa das crianças na aprendizagem financeira.
-    <br>
+    
+<br>
 
 ## Diagrama de casos de uso:
 <br>    
