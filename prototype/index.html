@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html class="h-screen" lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -23,12 +23,12 @@
     }
   </style>
 </head>
-<body class="bg-gray-200 flex justify-center items-center h-screen">
-  <!-- Container com borda simulando um dispositivo móvel -->
-  <div class="border-2 border-black rounded-3xl p-4 max-w-md">
-
-  <div class="max-w-sm w-full">
-    <div class="flex justify-center">
+<body class="bg-gray-200 flex justify-center flex-col">
+     <!-- Container com borda simulando um dispositivo móvel -->
+    <div class="rounded-3xl p-4 max-w-md flex flex-1">
+      
+      <div class="max-w-sm w-full">
+        <div class="flex justify-center">
       <img src="images/group.png" alt="Imagem" >
     </div>
     <select id="inputPerfil" class="w-full form-control border-2 border-spacing-1 border-black rounded-full p-1 mb-2">
@@ -41,7 +41,7 @@
 
     <script>
       const inputPerfil = document.getElementById('inputPerfil');
-
+      
       inputPerfil.addEventListener('change', (event) => {
         const perfilSelecionado = event.target.value;
 
@@ -57,9 +57,9 @@
       <div class="mb-4">
         <label for="inputValor" class="block text-sm ">Valor</label>
         <input type="text" id="inputValor" class="w-full form-control text-right border border-gray-300 rounded-md py-1"
-          inputmode="numeric">
+        inputmode="numeric">
       </div>
-
+      
       <script>
         document.getElementById('inputValor').addEventListener('input', function (event) {
           let inputValue = event.target.value;
@@ -67,14 +67,14 @@
           inputValue = (Number(inputValue) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           event.target.value = inputValue;
         });
-      </script>
+        </script>
 
-      <div class="mb-4">
-        <label for="inputDescricao" class="block text-sm">Descrição</label>
-        <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
-          placeholder="Adicionar descrição">
-      </div>
-      <div class="mb-4">
+<div class="mb-4">
+  <label for="inputDescricao" class="block text-sm">Descrição</label>
+  <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
+  placeholder="Adicionar descrição">
+</div>
+<div class="mb-4">
         <label for="inputCategoria" class="block text-sm">Categoria</label>
         <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1" required>
           <option value="" disabled selected>Selecione uma categoria</option>
@@ -96,7 +96,7 @@
           }
         </style>
 
-        <ul id="my-list" style="height: 90px; max-height: 90px; overflow-y: scroll;">
+<ul id="my-list" style="height: 90px; max-height: 90px; overflow-y: scroll;">
           <li>
             <input type="checkbox" id="check-all" /> Todos
           </li>
@@ -121,11 +121,11 @@
 
       <div class="mb-4 mt-2">
         <label for="inputRecorrente"
-          class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
-          <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
+        class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
+        <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
           Recorrente
         </label>
-
+        
         <div class="recurrent-options" x-show="recorrente">
           <label for="frequency">Escolha a frequência:</label>
           <select id="frequency" class="form-control" x-model="selectedFrequency">
@@ -136,25 +136,25 @@
             <option value="annually">Anualmente</option>
           </select>
           <br>
-
+          
           <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
           <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'"
-            :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
+          :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
         </div>
-
+        
         <script>
           document.addEventListener('DOMContentLoaded', function () {
             const frequencySelect = document.getElementById('frequency');
             const dateInput = document.getElementById('customDate');
             const checkboxRecorrente = document.getElementById('inputRecorrente');
             const recurrentOptions = document.querySelector('.recurrent-options');
-
+            
             // Initially hide the recurrent options
-            recurrentOptions.style.display = 'none';
-
+            recurrentOptions.style.display ='none';
+            
             // Seleciona a data corrente por default
             dateInput.value = new Date().toISOString().split('T')[0];
-
+            
             frequencySelect.addEventListener('change', function () {
               const frequency = this.value;
               if (frequency === 'daily') {
@@ -186,7 +186,7 @@
         #customDate {
           width: 100%;
         }
-      </style>
+        </style>
 
       <div class="flex items-center justify-center space-x-4">
         <button type="button" id="resetButton" class="bg-blue-500 text-white py-2 px-4 rounded">Cancelar</button>
@@ -216,14 +216,14 @@
         </script>
 
 
-        <button type="button" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
+<button type="button" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded">Concluir</button>
         <script>
           const submitButton = document.getElementById('submitButton');
           const formElements = document.querySelectorAll('input, select');
-
+          
           submitButton.addEventListener('click', () => {
             let formIsEmpty = false;
-
+            
             for (const element of formElements) {
               if (
                 (element.type === 'text' && element.value === '') ||
@@ -239,13 +239,14 @@
             }
             alert('Transação adicionada com sucesso!');
           });
-        </script>
+          </script>
 
-      </div>
-      </section>
-      </main>
-      <footer class="py-4 px-4 flex justify-center">
-        <div class="flex flex-row items-center space-x-32">
+</div>
+</section>
+</main>
+
+<footer class="py-4 px-4 flex justify-center bottom-0 fixed">
+  <div class="flex flex-row items-center space-x-32">
           <button class="icon-button">
             <img src="images/house.png" class="mr-2">
           </button>
