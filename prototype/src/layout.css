@@ -1,0 +1,15 @@
+.sharing-list {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.scrollable-container {
+    border-radius: 3xl;
+    padding: 1.5rem;
+    max-width: 24rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 80vh;
+}

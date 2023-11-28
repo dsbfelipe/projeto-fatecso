@@ -2,3 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: rgba(153, 181, 194, 0.603);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#inputValor {
+    text-align: right;
+    padding-right: 15px;
+  }
+  
+
+.recurrent-options {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(161, 161, 161, 0.507);
+    box-shadow: 0 0 9px rgba(14, 3, 3, 0.397);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.recurrent-options {
+    margin-top: 10px;
+}
+
+#frequency,
+#customDate {
+    width: 100%;
+}
+
+.icon-button {
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.button {
+    background-color: rgba(4, 27, 61, 0.692);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    /* py-2 px-4 */
+    border-radius: 0.49rem;
+    /* rounded */
+}
+
+.recurrent-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .recurrent-options.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
