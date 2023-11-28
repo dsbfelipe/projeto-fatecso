@@ -129,7 +129,7 @@
             <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
             Recorrente
           </label>
-
+        
           <div class="recurrent-options">
             <label for="frequency">Escolha a frequência:</label>
             <select id="frequency" class="form-control" x-model="selectedFrequency">
@@ -140,21 +140,23 @@
               <option value="annually">Anualmente</option>
             </select>
             <br>
-
+        
             <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
             <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'"
               :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
           </div>
         </div>
+        
 
 
         <script>
           const inputRecorrente = document.getElementById('inputRecorrente');
-          const recurrentOptions = document.querySelector('.recurrent-options');
+const recurrentOptions = document.querySelector('.recurrent-options');
 
-          inputRecorrente.addEventListener('change', function () {
-            recurrentOptions.classList.toggle('active', this.checked);
-          });
+inputRecorrente.addEventListener('change', function () {
+  recurrentOptions.classList.toggle('active', this.checked);
+});
+
 
         </script>
     </div>
@@ -214,38 +216,38 @@
         });
       </script>
 
-      <div class="bottom-menu">
-        <button class="icon-button">
-          <i class="fas fa-house"></i>
-        </button>
+</div>
+<div class="bottom-menu">
+  <button class="icon-button">
+    <i class="fas fa-house"></i>
+  </button>
 
-        <button class="icon-button">
-          <i class="fa-solid fa-heart " alt="heart" id="heart" onclick="trocarImagem()"></i>
-        </button>
+  <button class="icon-button">
+    <i class="fa-solid fa-heart " alt="heart" id="heart" onclick="trocarImagem()"></i>
+  </button>
 
-        <script>
-          function trocarImagem() {
-            var heartIcon = document.getElementById('heart');
-            var currentColor = heartIcon.style.color;
+  <script>
+    function trocarImagem() {
+      var heartIcon = document.getElementById('heart');
+      var currentColor = heartIcon.style.color;
 
-            if (currentColor === 'black') {
-              heartIcon.style.color = '#e53838';
-            } else {
-              heartIcon.style.color = 'black';
-            }
-          }
-        </script>
+      if (currentColor === 'black') {
+        heartIcon.style.color = '#e53838';
+      } else {
+        heartIcon.style.color = 'black';
+      }
+    }
+  </script>
 
-        <button class="icon-button">
-          <i class="fa-solid fa-circle-plus"></i>
-        </button>
+  <button class="icon-button">
+    <i class="fa-solid fa-circle-plus"></i>
+  </button>
 
-        <button class="icon-button">
-          <i class="fa-solid fa-circle-plus"></i>
-        </button>
+  <button class="icon-button">
+    <i class="fa-solid fa-circle-plus"></i>
+  </button>
 
-      </div>
-    </div>
+</div>
 
 
   </div>
