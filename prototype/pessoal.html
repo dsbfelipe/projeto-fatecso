@@ -13,223 +13,219 @@
     integrity="sha256-2C2ejegpyniFQusEjeCqVV2XhIckovh2IqC+KGMNKT0=" crossorigin="anonymous"></script>
   <title>Porkin - Adicione Transação</title>
   <link rel="stylesheet" href="./src/style.css">
-  <link rel="stylesheet" href="./src/layout.css">
 </head>
 
 <body>
   <div class="scrollable-container">
+    <div class="flex justify-center mb-2 mt-2">
+      <i class="fa-solid fa-user"></i>
+      <style>
+        i.fa-solid.fa-user {
+          font-size: 6em;
+        }
+      </style>
+    </div>
+    <select id="inputPerfil" class="w-full form-control border-2 border-spacing-1 border-black rounded-full p-1 mb-2">
+      <option value="1">Pessoal</option>
+      <option value="2">Grupo Família</option>
+      <option value="3">Churrasco fim de ano</option>
+      <option value="4">Viagem Praia</option>
+    </select>
+    </section>
 
-    <div class="max-w-sm w-full">
-      <div class="flex justify-center mb-2 mt-2">
-        <i class="fa-solid fa-user"></i>
-        <style>
-          i.fa-solid.fa-user {
-            font-size: 6em;
-          }
-        </style>
+    <script>
+      const inputPerfil = document.getElementById('inputPerfil');
+
+      inputPerfil.addEventListener('change', (event) => {
+        const perfilSelecionado = event.target.value;
+
+        if (perfilSelecionado === '1') {
+
+          window.location.href = 'pessoal.html';
+        }
+        if (perfilSelecionado === '2') {
+
+          window.location.href = 'index.html';
+        }
+        if (perfilSelecionado === '3') {
+
+          window.location.href = 'index.html';
+        }
+        if (perfilSelecionado === '4') {
+
+          window.location.href = 'index.html';
+        }
+      });
+    </script>
+
+
+
+    <form class="flex flex-col">
+      <div class="mb-4">
+        <label for="inputValor" class="block text-sm ">Valor</label>
+        <input type="text" id="inputValor" class="w-full form-control text-right border border-gray-300 rounded-md py-1"
+          inputmode="numeric" placeholder="R$0,00">
       </div>
-      <select id="inputPerfil" class="w-full form-control border-2 border-spacing-1 border-black rounded-full p-1 mb-2">
-       <option value="1">Pessoal</option>
-        <option value="2">Grupo Família</option>
-        <option value="3">Churrasco fim de ano</option>
-        <option value="4">Viagem Praia</option>
-      </select>
-      </section>
 
       <script>
-        const inputPerfil = document.getElementById('inputPerfil');
-
-        inputPerfil.addEventListener('change', (event) => {
-          const perfilSelecionado = event.target.value;
-
-          if (perfilSelecionado === '1') {
-
-            window.location.href = 'pessoal.html';
-          }
-          if (perfilSelecionado === '2') {
-
-            window.location.href = 'index.html';
-          }
-          if (perfilSelecionado === '3') {
-
-            window.location.href = 'index.html';
-          }
-          if (perfilSelecionado === '4') {
-
-            window.location.href = 'index.html';
-          }
+        document.getElementById('inputValor').addEventListener('input', function (event) {
+          let inputValue = event.target.value;
+          inputValue = inputValue.replace(/[^0-9]/g, '');
+          inputValue = (Number(inputValue) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          event.target.value = inputValue;
         });
+      </script>
+
+      <div class="mb-4">
+        <label for="inputDescricao" class="block text-sm">Descrição</label>
+        <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
+          placeholder="Adicionar descrição">
+      </div>
+      <div class="mb-4">
+        <label for="inputCategoria" class="block text-sm">Categoria</label>
+        <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1" required>
+          <option value="" disabled selected>Selecione uma categoria</option>
+          <option value="1">Alimentação</option>
+          <option value="2">Lazer</option>
+          <option value="3">Moradia</option>
+          <option value="4">Transporte</option>
+          <option value="5">Viagens</option>
+        </select>
+      </div>
+
+
+
+      <div class="mb-4 mt-2">
+        <label for="inputRecorrente"
+          class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
+          <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
+          Recorrente
+        </label>
+
+        <div class="recurrent-options">
+          <label for="frequency">Escolha a frequência:</label>
+          <select id="frequency" class="form-control" x-model="selectedFrequency">
+            <option value="every-15-days">A cada 15 dias</option>
+            <option value="every-7-days">A cada 7 dias</option>
+            <option value="monthly">Mensalmente</option>
+            <option value="daily">Todo dia</option>
+            <option value="annually">Anualmente</option>
+          </select>
+          <br>
+
+          <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
+          <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'"
+            :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
+        </div>
+      </div>
+
+
+
+      <script>
+        const inputRecorrente = document.getElementById('inputRecorrente');
+        const recurrentOptions = document.querySelector('.recurrent-options');
+
+        inputRecorrente.addEventListener('change', function () {
+          recurrentOptions.classList.toggle('active', this.checked);
+        });
+
+
       </script>
 
 
 
-      <form class="flex flex-col">
-        <div class="mb-4">
-          <label for="inputValor" class="block text-sm ">Valor</label>
-          <input type="text" id="inputValor"
-            class="w-full form-control text-right border border-gray-300 rounded-md py-1" inputmode="numeric"
-             placeholder="R$0,00">
-        </div>
-
+      <div class="flex items-center justify-center space-x-4">
+        <button type="button" id="resetButton" class="button">Cancelar</button>
         <script>
-          document.getElementById('inputValor').addEventListener('input', function (event) {
-            let inputValue = event.target.value;
-            inputValue = inputValue.replace(/[^0-9]/g, '');
-            inputValue = (Number(inputValue) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-            event.target.value = inputValue;
+          const resetButton = document.getElementById('resetButton');
+          resetButton.addEventListener('click', () => {
+            const formElements = document.querySelectorAll('input, select');
+            for (const element of formElements) {
+              if (element.type === 'text') {
+                element.value = '';
+              } else if (element.type === 'checkbox') {
+                element.checked = false;
+                document.querySelector('.recurrent-options').style.display = 'none';
+              } else if (element.type === 'select') {
+                element.selectedIndex = 0;
+              }
+            }
+
+            // Clear the selected frequency option
+            const frequencySelect = document.getElementById('frequency');
+            frequencySelect.selectedIndex = 0;
+
+            // Clear the custom date
+            const customDateInput = document.getElementById('customDate');
+            customDateInput.value = '';
           });
         </script>
 
-        <div class="mb-4">
-          <label for="inputDescricao" class="block text-sm">Descrição</label>
-          <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
-            placeholder="Adicionar descrição">
-        </div>
-        <div class="mb-4">
-          <label for="inputCategoria" class="block text-sm">Categoria</label>
-          <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1" required>
-            <option value="" disabled selected>Selecione uma categoria</option>
-            <option value="1">Alimentação</option>
-            <option value="2">Lazer</option>
-            <option value="3">Moradia</option>
-            <option value="4">Transporte</option>
-            <option value="5">Viagens</option>
-          </select>
-        </div>
 
-        
-
-        <div class="mb-4 mt-2">
-          <label for="inputRecorrente"
-            class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
-            <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
-            Recorrente
-          </label>
-        
-          <div class="recurrent-options">
-            <label for="frequency">Escolha a frequência:</label>
-            <select id="frequency" class="form-control" x-model="selectedFrequency">
-              <option value="every-15-days">A cada 15 dias</option>
-              <option value="every-7-days">A cada 7 dias</option>
-              <option value="monthly">Mensalmente</option>
-              <option value="daily">Todo dia</option>
-              <option value="annually">Anualmente</option>
-            </select>
-            <br>
-        
-            <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
-            <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'"
-              :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
-          </div>
-        </div>
-        
-
-
+        <button type="button" id="submitButton" class="button">Concluir</button>
         <script>
-          const inputRecorrente = document.getElementById('inputRecorrente');
-const recurrentOptions = document.querySelector('.recurrent-options');
+          const submitButton = document.getElementById('submitButton');
+          const formElements = document.querySelectorAll('input, select');
 
-inputRecorrente.addEventListener('change', function () {
-  recurrentOptions.classList.toggle('active', this.checked);
-});
+          submitButton.addEventListener('click', () => {
+            let formIsEmpty = false;
 
-
-        </script>
-        </div>
-        
-
-        <div class="flex items-center justify-center space-x-4">
-          <button type="button" id="resetButton" class="button">Cancelar</button>
-          <script>
-            const resetButton = document.getElementById('resetButton');
-            resetButton.addEventListener('click', () => {
-              const formElements = document.querySelectorAll('input, select');
-              for (const element of formElements) {
-                if (element.type === 'text') {
-                  element.value = '';
-                } else if (element.type === 'checkbox') {
-                  element.checked = false;
-                  document.querySelector('.recurrent-options').style.display = 'none';
-                } else if (element.type === 'select') {
-                  element.selectedIndex = 0;
-                }
-              }
-
-              // Clear the selected frequency option
-              const frequencySelect = document.getElementById('frequency');
-              frequencySelect.selectedIndex = 0;
-
-              // Clear the custom date
-              const customDateInput = document.getElementById('customDate');
-              customDateInput.value = '';
-            });
-          </script>
-
-
-          <button type="button" id="submitButton" class="button">Concluir</button>
-          <script>
-            const submitButton = document.getElementById('submitButton');
-            const formElements = document.querySelectorAll('input, select');
-
-            submitButton.addEventListener('click', () => {
-              let formIsEmpty = false;
-
-              for (const element of formElements) {
-                if (
-                  (element.type === 'text' && element.value === '') ||
-                  (element.type === 'select' && element.selectedIndex === 0)
-                ) {
-                  formIsEmpty = true;
-                  break;
-                }
-              }
-              if (formIsEmpty) {
-                alert('Por favor preencha todos os campos');
-                return;
-              }
-              alert('Transação adicionada com sucesso!');
-            });
-          </script>
-
-        </div>
-        </section>
-
-        <div class="bottom-menu">
-          <button class="icon-button">
-            <i class="fas fa-house"></i>
-          </button>
-
-          <button class="icon-button">
-          <i class="fa-solid fa-heart " alt="heart" id="heart" onclick="trocarImagem()"></i>
-          </button>
-
-          <script>
-            function trocarImagem() {
-              var heartIcon = document.getElementById('heart');
-              var currentColor = heartIcon.style.color;
-
-              if (currentColor === 'black') {
-                heartIcon.style.color = '#e53838';
-              } else {
-                heartIcon.style.color = 'black';
+            for (const element of formElements) {
+              if (
+                (element.type === 'text' && element.value === '') ||
+                (element.type === 'select' && element.selectedIndex === 0)
+              ) {
+                formIsEmpty = true;
+                break;
               }
             }
-          </script>
+            if (formIsEmpty) {
+              alert('Por favor preencha todos os campos');
+              return;
+            }
+            alert('Transação adicionada com sucesso!');
+          });
+        </script>
 
-          <button class="icon-button">
-            <i class="fa-solid fa-circle-plus"></i>
-          </button>
+      </div>
+      </section>
 
-          <button class="icon-button">
-            <i class="fa-solid fa-circle-plus"></i>
-          </button>
+      <div class="bottom-menu">
+        <button class="icon-button">
+          <i class="fas fa-house"></i>
+        </button>
 
-        </div>
-    </div>
-    </main>
+        <button class="icon-button">
+          <i class="fa-solid fa-heart " alt="heart" id="heart" onclick="trocarImagem()"></i>
+        </button>
 
-    <footer>
-    </footer>
+        <script>
+          function trocarImagem() {
+            var heartIcon = document.getElementById('heart');
+            var currentColor = heartIcon.style.color;
+
+            if (currentColor === 'black') {
+              heartIcon.style.color = '#e53838';
+            } else {
+              heartIcon.style.color = 'black';
+            }
+          }
+        </script>
+
+        <button class="icon-button">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
+
+        <button class="icon-button">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
+
+      </div>
+  </div>
+  </main>
+
+  <footer>
+  </footer>
 
   </div>
 </body>
