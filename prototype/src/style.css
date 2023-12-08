@@ -37,18 +37,6 @@ body {
     justify-content: center;
 }
 
-.bottom-menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #e1f1efde;
-    box-shadow: 0 0 9px rgba(14, 3, 3, 0.397);
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
 
 .recurrent-options {
     display: flex;
@@ -81,10 +69,23 @@ body {
     color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     border-radius: 0.49rem;
-
+    
 }
 
 .sharing-list {
     margin-bottom: 10px;
     display: block;
-}
+} 
+
+.bottom-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #e1f1efde;
+        box-shadow: 0 0 9px rgba(14, 3, 3, 0.397);
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
