@@ -13,8 +13,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js"
     integrity="sha256-2C2ejegpyniFQusEjeCqVV2XhIckovh2IqC+KGMNKT0=" crossorigin="anonymous"></script>
   <title>Grupo Família</title>
-  <link rel="stylesheet" href="./src/style.css">
-  <script defer src="./js/script.js"></script>
+  <link rel="stylesheet" href="../src/style.css"> 
+  <script defer src="../js/script.js"></script>
 
 </head>
 
@@ -64,7 +64,7 @@
       </div>
       <div class="mb-4">
         <label for="inputCategoria" class="block text-sm">Categoria</label>
-        <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1" required>
+        <select id="inputCategoria" class="w-full form-control border border-gray-300 rounded-md py-1">
           <option value="" disabled selected>Selecione uma categoria</option>
           <option value="1">Alimentação</option>
           <option value="2">Lazer</option>
@@ -143,23 +143,24 @@
         <button type="button" id="submitButton" class="button">Concluir</button>
 
       </div>
+
+
       <div class="bottom-menu">
-        <button class="icon-button">
+        <button class="icon-button" onclick="navegarPara('index.html')">
           <i class="fas fa-house"></i>
         </button>
 
-        <button class="icon-button">
-          <i class="fa-solid fa-heart " alt="heart" id="heart" onclick="trocarImagem()"></i>
+        <button class="icon-button" onclick="navegarPara('pessoal.html')">
+          <i class="fa-solid fa-heart" alt="heart" id="heart" onclick="trocarImagem()"></i>
         </button>
 
-        <button class="icon-button">
+        <button class="icon-button" onclick="navegarPara('pagina3.html')">
           <i class="fa-solid fa-circle-plus"></i>
         </button>
 
-        <button class="icon-button">
+        <button class="icon-button" onclick="navegarPara('pagina4.html')">
           <i class="fa-solid fa-circle-plus"></i>
         </button>
-
       </div>
 
 

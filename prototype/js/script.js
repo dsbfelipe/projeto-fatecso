@@ -120,3 +120,9 @@ function trocarImagem() {
         heartIcon.style.color = 'black';
     }
 }
+
+//script para navegação do bottom-menu
+
+function navegarPara(pagina) {
+    window.location.href = pagina;
+  }
