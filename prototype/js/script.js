@@ -109,9 +109,8 @@ submitButton.addEventListener('click', () => {
 });
 
 //script trocar imagem ao clicar botão heart
-
-function trocarImagem() {
-    var heartIcon = document.getElementById('heart');
+/*function trocarImagem() {
+    var heartIcon = document.querySelector('.bottom-menu #heart i');
     var currentColor = heartIcon.style.color;
 
     if (currentColor === 'black') {
@@ -119,10 +118,10 @@ function trocarImagem() {
     } else {
         heartIcon.style.color = 'black';
     }
-}
+}*/
 
-//script para navegação do bottom-menu
 
+//script navegacao bottom menu 
 function navegarPara(pagina) {
-    window.location.href = pagina;
+    window.location.replace(pagina);
   }
