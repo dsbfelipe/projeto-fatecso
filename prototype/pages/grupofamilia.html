@@ -113,29 +113,58 @@
         });
       </script>
 
-      <div class="mb-4 mt-2">
-        <label for="inputRecorrente"
-          class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
-          <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2" x-model="recorrente">
-          Recorrente
-        </label>
+<div class="mb-4 mt-2">
+  <label for="inputRecorrente" class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
+    <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
+    Recorrente
+  </label>
 
-        <div class="recurrent-options">
-          <label for="frequency">Escolha a frequência:</label>
-          <select id="frequency" class="form-control" x-model="selectedFrequency">
-            <option value="every-15-days">A cada 15 dias</option>
-            <option value="every-7-days">A cada 7 dias</option>
-            <option value="monthly">Mensalmente</option>
-            <option value="daily">Todo dia</option>
-            <option value="annually">Anualmente</option>
-          </select>
-          <br>
+  <div class="custom-options">
+    <label for="frequency">Escolha a frequência:</label>
+    <select id="frequency" class="form-control">
+      <option value="every-15-days">A cada 15 dias</option>
+      <option value="every-7-days">A cada 7 dias</option>
+      <option value="monthly">Mensalmente</option>
+      <option value="daily">Todo dia</option>
+      <option value="annually">Anualmente</option>
+    </select>
+    <br>
 
-          <label for="customDate" x-show="selectedFrequency !== 'daily'">Data:</label>
-          <input type="date" id="customDate" class="form-control" x-show="selectedFrequency !== 'daily'"
-            :readonly="selectedFrequency === 'daily'" x-bind:value="currentDate">
-        </div>
-      </div>
+    <label for="customDate" class="custom-date">Data:</label>
+    <input type="date" id="customDate" class="form-control custom-date" readonly>
+  </div>
+</div>
+
+
+<script>
+  const checkbox = document.getElementById('inputRecorrente');
+  const customOptions = document.querySelector('.custom-options');
+  const selectFrequency = document.getElementById('frequency');
+  const inputCustomDate = document.getElementById('customDate');
+
+  checkbox.addEventListener('change', function() {
+    const isChecked = checkbox.checked;
+
+    if (isChecked) {
+      customOptions.style.color = 'black'; // Se marcado, muda para preto
+      selectFrequency.removeAttribute('disabled');
+      inputCustomDate.removeAttribute('disabled');
+    } else {
+      customOptions.style.color = 'gray'; // Se desmarcado, mantém como cinza
+      selectFrequency.setAttribute('disabled', 'disabled');
+      inputCustomDate.setAttribute('disabled', 'disabled');
+    }
+  });
+
+  // Definindo a cor inicial ao carregar a página
+  window.addEventListener('DOMContentLoaded', function() {
+    if (!checkbox.checked) {
+      customOptions.style.color = 'gray'; // Definindo como cinza quando a página carrega
+      selectFrequency.setAttribute('disabled', 'disabled');
+      inputCustomDate.setAttribute('disabled', 'disabled');
+    }
+  });
+</script>
 
 
 

@@ -4,6 +4,13 @@
 
 /* styles.css */
 
+/* Estilo padrão para o texto */
+/* Estilo padrão para o texto */
+/* Estilo padrão para o texto */
+.custom-options {
+    color: rgb(180, 180, 180); /* Definindo a cor inicial como cinza */
+  }
+  
 body {
     margin: 0;
     padding: 0;
