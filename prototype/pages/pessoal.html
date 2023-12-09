@@ -126,7 +126,7 @@
             selectFrequency.removeAttribute('disabled');
             inputCustomDate.removeAttribute('disabled');
           } else {
-            customOptions.style.color = 'gray'; // Se desmarcado, mantém como cinza
+            customOptions.style.color = 'rgb(221, 218, 218)'; // Se desmarcado, mantém como cinza
             selectFrequency.setAttribute('disabled', 'disabled');
             inputCustomDate.setAttribute('disabled', 'disabled');
           }
@@ -135,7 +135,7 @@
         // Definindo a cor inicial ao carregar a página
         window.addEventListener('DOMContentLoaded', function() {
           if (!checkbox.checked) {
-            customOptions.style.color = 'gray'; // Definindo como cinza quando a página carrega
+            customOptions.style.color = 'rgb(221, 218, 218)'; // Definindo como cinza quando a página carrega
             selectFrequency.setAttribute('disabled', 'disabled');
             inputCustomDate.setAttribute('disabled', 'disabled');
           }

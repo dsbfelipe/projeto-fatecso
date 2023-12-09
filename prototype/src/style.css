@@ -7,14 +7,28 @@
 /* Estilo padrão para o texto */
 /* Estilo padrão para o texto */
 /* Estilo padrão para o texto */
+.custom-options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .custom-options label,
+  .custom-options select,
+  .custom-options input[type="date"] {
+    margin-bottom: 4px; /* Adiciona espaçamento entre os elementos */
+  }
+  
+  .custom-options label[for="frequency"] {
+    margin-top: 10px; /* Adiciona margem no topo do label "Escolha a frequência" */
+  }
+
+
 * {
     margin-left: 0;
 }
 
-.custom-options {
-    color: rgb(180, 180, 180); /* Definindo a cor inicial como cinza */
-  }
-  
+
+ 
 body {
     margin: 0;
     padding: 0;
@@ -207,3 +221,4 @@ body {
         color: rgb(255, 255, 255);
       }
       
+   
