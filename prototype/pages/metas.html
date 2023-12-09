@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" style="height: 100vh; max-height: 100vh;">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Hedvig+Letters+Serif:opsz@12..24&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <title>Nova meta</title>
     <link rel="stylesheet" href="../src/style.css">
     <script defer src="../js/script.js"></script>
@@ -17,18 +16,16 @@
 
 <body>
     <div class="full-page">
-
         <div class="container-header">
-            <button class="btn-voltar"> <span class="icon-wrapper">
+            <button class="btn-voltar">
+                <span class="icon-wrapper">
                     <i class="fa-solid fa-arrow-left"></i>
                 </span>
             </button>
             <header>
-                <h1>Nova meta
-                    <hr class="separator">
-                </h1>
+                <h1>Nova meta</h1>
+                <hr class="separator">
             </header>
-
             <div class="inputMeta">
                 <label for="inputMeta">Valor da meta</label>
                 <br>
@@ -44,14 +41,18 @@
                     style="border: none;" />
             </div>
             <hr class="separator">
-            
             <div class="input-container">
                 <i class="fa-solid fa-file-lines fa-2x"></i>
-                <input type="text" id="nome-objetivo" class="form-control" placeholder="Nome do objetivo"
+                <input type="text" id="nome-objetivo" class="form-control" placeholder="Nome da meta"
+                    style="border: none;" />
+            </div>
+            <hr class="separator">
+            <div class="input-container">
+                <i class="fa-regular fa-calendar fa-2x"></i>
+                <input type="text" id="nome-objetivo" class="form-control" placeholder="Data final"
                     style="border: none;" />
             </div>
         </div>
-    </div>
     </div>
     <footer>
     </footer>

@@ -11,7 +11,6 @@ document.getElementById('inputValor').addEventListener('input', function (event)
 
 
 
-
 //script input recorrente - recurrent-options
 
 const inputRecorrente = document.getElementById('inputRecorrente');
