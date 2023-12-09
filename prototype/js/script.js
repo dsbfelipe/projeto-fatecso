@@ -124,3 +124,8 @@ submitButton.addEventListener('click', () => {
 function navegarPara(pagina) {
     window.location.replace(pagina);
   }
+
+
+function trocarPagina(url) {
+    window.location.href = url;
+  }
