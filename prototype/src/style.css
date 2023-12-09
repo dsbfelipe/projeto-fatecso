@@ -27,8 +27,16 @@
     margin-left: 0;
 }
 
+<<<<<<< HEAD
 
  
+=======
+.custom-options {
+    color: rgb(180, 180, 180);
+    /* Definindo a cor inicial como cinza */
+}
+
+>>>>>>> 740a26f97ea08c92e330f15161727c2532ba6f6a
 body {
     margin: 0;
     padding: 0;
@@ -94,28 +102,28 @@ body {
     color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     border-radius: 0.49rem;
-    
+
 }
 
 .sharing-list {
     margin-bottom: 10px;
     display: block;
-} 
+}
 
 .bottom-menu {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #6581FC !important;
-        border-radius: 25px 25px 0px 0px;
-        background: transparent;
-        display: flex;
-        padding: 10px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6581FC !important;
+    border-radius: 25px 25px 0px 0px;
+    background: transparent;
+    display: flex;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 
 
     header {

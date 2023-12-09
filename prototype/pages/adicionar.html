@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="height: 100vh; max-height: 100vh;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js"></script>
+  <title>Pessoal</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+  <div class="scrollable-container">
+
+    <header>
+      <h1>Adicionar </h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <span class="icon-wrapper">
+            <i class="fa-solid fa-building-columns"></i>
+          </span>
+          <a class="class-inserir" href="#">Contas</a>
+        </li>
+        <li>
+          <hr class="separator">
+        </li>
+        <li>
+          <span class="icon-wrapper">
+            <i class="fa-regular fa-credit-card"></i>
+          </span>
+          <a class="class-inserir" href="#">Cartão de Crédito</a>
+        </li>
+        <li>
+          <hr class="separator">
+        </li>
+        <li>
+          <span class="icon-wrapper">
+            <i class="fa-solid fa-bullseye"></i>
+          </span>
+          <a class="class-inserir" href="#">Metas</a>
+        </li>
+        <li>
+          <hr class="separator">
+        </li>
+        <li>
+          <span class="icon-wrapper">
+            <i class="fa-solid fa-tag"></i>
+          </span>
+          <a class="class-inserir" href="#">Categorias</a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <div class="bottom-menu">
+      <button type="button" class="icon-button" onclick="navegarPara('menu.html')">
+        <i class="fas fa-house"></i>
+      </button>
+
+      <button type="button" class="icon-button" onclick="navegarPara('grupofamilia.html')">
+        <i class="fas fa-heart" alt="heart" id="heart" onclick="trocarImagem()"></i>
+      </button>
+
+      <button type="button" class="icon-button" onclick="navegarPara('pessoal.html')">
+        <i class="fas fa-circle-plus"></i>
+      </button>
+
+      <button type="button" class="icon-button" onclick="navegarPara('adicionar.html')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+
+
+
+  </div>
+
+  <footer>
+  </footer>
+
+
+  </div>
+</body>
+
+</html>
