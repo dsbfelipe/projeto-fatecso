@@ -60,12 +60,12 @@ body {
 
 .icon-button {
     font-size: 2em;
-    color: #002a3ae8;
+    color: #ffffffe8;
     cursor: pointer;
 }
 
 .button {
-    background-color: rgba(4, 27, 61, 0.692);
+    background-color: #523CBD;
     color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     border-radius: 0.49rem;
@@ -81,8 +81,10 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #e1f1efde;
-        box-shadow: 0 0 9px rgba(14, 3, 3, 0.397);
+        background-color: #523CBD !important;
+        border-radius: 25px 25px 0px 0px;
+        background: transparent;
+        display: flex;
         padding: 10px;
         position: fixed;
         bottom: 0;
