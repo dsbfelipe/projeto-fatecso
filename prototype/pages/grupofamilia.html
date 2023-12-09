@@ -14,7 +14,7 @@
   <title>Grupo Família</title>
   <link rel="stylesheet" href="../src/style.css">
   <script defer src="../js/script.js"></script>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
@@ -113,60 +113,58 @@
         });
       </script>
 
-<div class="mb-4 mt-2">
-  <label for="inputRecorrente" class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
-    <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
-    Recorrente
-  </label>
+      <div class="mb-4 mt-2">
+        <label for="inputRecorrente" class="flex items-center justify-center text-sm border border-gray-300 rounded-md py-1">
+          <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
+          Recorrente
+        </label>
 
-  <div class="custom-options">
-    <label for="frequency">Escolha a frequência:</label>
-    <select id="frequency" class="form-control">
-      <option value="every-15-days">A cada 15 dias</option>
-      <option value="every-7-days">A cada 7 dias</option>
-      <option value="monthly">Mensalmente</option>
-      <option value="daily">Todo dia</option>
-      <option value="annually">Anualmente</option>
-    </select>
-    <br>
+        <div class="custom-options">
+          <label for="frequency">Escolha a frequência:</label>
+          <select id="frequency" class="form-control">
+            <option value="every-15-days">A cada 15 dias</option>
+            <option value="every-7-days">A cada 7 dias</option>
+            <option value="monthly">Mensalmente</option>
+            <option value="daily">Todo dia</option>
+            <option value="annually">Anualmente</option>
+          </select>
+          <br>
 
-    <label for="customDate" class="custom-date">Data:</label>
-    <input type="date" id="customDate" class="form-control custom-date" readonly>
-  </div>
-</div>
-
-
-<script>
-  const checkbox = document.getElementById('inputRecorrente');
-  const customOptions = document.querySelector('.custom-options');
-  const selectFrequency = document.getElementById('frequency');
-  const inputCustomDate = document.getElementById('customDate');
-
-  checkbox.addEventListener('change', function() {
-    const isChecked = checkbox.checked;
-
-    if (isChecked) {
-      customOptions.style.color = 'black'; // Se marcado, muda para preto
-      selectFrequency.removeAttribute('disabled');
-      inputCustomDate.removeAttribute('disabled');
-    } else {
-      customOptions.style.color = 'gray'; // Se desmarcado, mantém como cinza
-      selectFrequency.setAttribute('disabled', 'disabled');
-      inputCustomDate.setAttribute('disabled', 'disabled');
-    }
-  });
-
-  // Definindo a cor inicial ao carregar a página
-  window.addEventListener('DOMContentLoaded', function() {
-    if (!checkbox.checked) {
-      customOptions.style.color = 'gray'; // Definindo como cinza quando a página carrega
-      selectFrequency.setAttribute('disabled', 'disabled');
-      inputCustomDate.setAttribute('disabled', 'disabled');
-    }
-  });
-</script>
+          <label for="customDate" class="custom-date">Data:</label>
+          <input type="date" id="customDate" class="form-control custom-date" readonly>
+        </div>
+      </div>
 
 
+      <script>
+        const checkbox = document.getElementById('inputRecorrente');
+        const customOptions = document.querySelector('.custom-options');
+        const selectFrequency = document.getElementById('frequency');
+        const inputCustomDate = document.getElementById('customDate');
+
+        checkbox.addEventListener('change', function() {
+          const isChecked = checkbox.checked;
+
+          if (isChecked) {
+            customOptions.style.color = 'black'; // Se marcado, muda para preto
+            selectFrequency.removeAttribute('disabled');
+            inputCustomDate.removeAttribute('disabled');
+          } else {
+            customOptions.style.color = 'gray'; // Se desmarcado, mantém como cinza
+            selectFrequency.setAttribute('disabled', 'disabled');
+            inputCustomDate.setAttribute('disabled', 'disabled');
+          }
+        });
+
+        // Definindo a cor inicial ao carregar a página
+        window.addEventListener('DOMContentLoaded', function() {
+          if (!checkbox.checked) {
+            customOptions.style.color = 'gray'; // Definindo como cinza quando a página carrega
+            selectFrequency.setAttribute('disabled', 'disabled');
+            inputCustomDate.setAttribute('disabled', 'disabled');
+          }
+        });
+      </script>
 
       <div class="flex items-center justify-center space-x-4">
         <button type="button" id="resetButton" class="button">Cancelar</button>
@@ -176,28 +174,12 @@
       </div>
     </form>
 
-      <div class="bottom-menu header-area header-sticky">
-        <button type="button" class="icon-button" onclick="navegarPara('menu.html')">
-            <i class="fas fa-house"></i>
-        </button>
-    
-        <button type="button" class="icon-button" onclick="navegarPara('grupofamilia.html')">
-            <i class="fas fa-heart" alt="heart" id="heart" onclick="trocarImagem()"></i>
-        </button>
-    
-        <button type="button" class="icon-button" onclick="navegarPara('pessoal.html')">
-            <i class="fas fa-circle-plus"></i>
-        </button>
-    
-        <button type="button" class="icon-button" onclick="navegarPara('metas.html')">
-          <i class="fa-solid fa-chart-simple"></i>
-        </button>
-    </div>
-    
-  </div>
-  
-
-  <footer>
+    <footer>
+      <button class="navbar-buttom" type="button"><span class="material-icons md-36">home</span></button>
+      <button class="navbar-buttom" type="button"><span class="material-icons md-36">people</span></button>
+      <button class="navbar-buttom" type="button"><span class="material-icons md-36">flight</span></button>
+      <button class="navbar-buttom" type="button"><span class="material-icons md-36">done_all</span></button>
+      <button class="navbar-buttom" type="button"><span class="material-icons md-36">person</span></button>
   </footer>
   
 </body>
