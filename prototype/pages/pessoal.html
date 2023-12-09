@@ -63,8 +63,14 @@
         <input type="text" id="inputValor" class="w-full form-control text-right border border-gray-300 rounded-md py-1"
           inputmode="numeric" placeholder="R$0,00">
       </div>
+      
+      <label for="inputTipo" class="block text-sm">Tipo</label>
+      <select id="inputTipo" class="w-full form-control border border-gray-300 rounded-md py-1">
+        <option value="entrada">Receita</option>
+        <option value="saida">Despesa</option>
+      </select>
 
-      <div class="mb-4">
+      <div class="mb-4 mt-4">
         <label for="inputDescricao" class="block text-sm">Descrição</label>
         <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
           placeholder="Adicionar descrição">
