@@ -65,7 +65,7 @@ body {
 }
 
 .button {
-    background-color: #523CBD;
+    background-color: #6581FC;
     color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     border-radius: 0.49rem;
@@ -81,7 +81,7 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #523CBD !important;
+        background-color: #6581FC !important;
         border-radius: 25px 25px 0px 0px;
         background: transparent;
         display: flex;
