@@ -16,24 +16,45 @@
 </head>
 
 <body>
-    <div class="scrollable-container">
-        <button class="btn-voltar"> <span class="icon-wrapper">
-                <i class="fa-solid fa-arrow-left"></i>
-            </span>
-        </button>
-        <header>
-            <h1>Nova meta</h1>
-        </header>
+    <div class="full-page">
 
+        <div class="container-header">
+            <button class="btn-voltar"> <span class="icon-wrapper">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+            </button>
+            <header>
+                <h1>Nova meta
+                    <hr class="separator">
+                </h1>
+            </header>
 
+            <div class="inputMeta">
+                <label for="inputMeta">Valor da meta</label>
+                <br>
+                <input type="text" id="inputValorMeta" class="inputField" placeholder="R$0,00" inputmode="numeric"
+                    oninput="formatarMoeda(this)">
+            </div>
+        </div>
 
+        <div class="container-body">
+            <div class="input-container">
+                <i class="fa-solid fa-piggy-bank fa-2x"></i>
+                <input type="number" id="valor-meta" class="form-control" placeholder="Valor inicial" step="0.01"
+                    style="border: none;" />
+            </div>
+            <hr class="separator">
+            
+            <div class="input-container">
+                <i class="fa-solid fa-file-lines fa-2x"></i>
+                <input type="text" id="nome-objetivo" class="form-control" placeholder="Nome do objetivo"
+                    style="border: none;" />
+            </div>
+        </div>
     </div>
-
+    </div>
     <footer>
     </footer>
-
-
-    </div>
 </body>
 
 </html>
