@@ -8,9 +8,10 @@
 /* Estilo padrão para o texto */
 /* Estilo padrão para o texto */
 .custom-options {
-    color: rgb(180, 180, 180); /* Definindo a cor inicial como cinza */
-  }
-  
+    color: rgb(180, 180, 180);
+    /* Definindo a cor inicial como cinza */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -101,11 +102,7 @@ body {
 
 
 header {
-    border: 1px solid #99a8ac;
-    margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #ffffff;
-    border-radius: 1.3rem;
 }
 
 h1 {
@@ -136,7 +133,7 @@ li {
 
 .separator {
     height: 1px;
-    margin: 1% ;
+    margin: 1%;
     border: none;
 }
 
@@ -168,4 +165,10 @@ hr {
 
 .icon-wrapper {
     color: #202f33;
+}
+
+.btn-voltar {
+    text-align: left;
+    font-size: 25px;
+    margin-right: 10px;
 }
