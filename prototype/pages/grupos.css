@@ -22,7 +22,7 @@ body, html {
     background-color: #6581FC;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
@@ -41,7 +41,7 @@ body, html {
   
   /* Estilos para o botão */
   .botao-titulo {
-    background-color: #ffffff;
+    background-color: #ffffff; 
     color: #415bcc;
     border: none;
     border-radius: 10px;
@@ -50,8 +50,10 @@ body, html {
     cursor: pointer;
     margin-top: 10px; 
     position: absolute; 
+    bottom: 10px; 
   }
 
+  
   .botao-criar-grupo {
     display: flex;
     justify-content: center;
