@@ -107,17 +107,6 @@ submitButton.addEventListener('click', () => {
     alert('Transação adicionada com sucesso!');
 });
 
-//script trocar imagem ao clicar botão heart
-/*function trocarImagem() {
-    var heartIcon = document.querySelector('.bottom-menu #heart i');
-    var currentColor = heartIcon.style.color;
-
-    if (currentColor === 'black') {
-        heartIcon.style.color = '#e53838';
-    } else {
-        heartIcon.style.color = 'black';
-    }
-}*/
 
 
 //script navegacao bottom menu 
@@ -129,3 +118,18 @@ function navegarPara(pagina) {
 function trocarPagina(url) {
     window.location.href = url;
   }
+
+    //script inputValormeta
+function formatarMoeda(input) {
+    let inputValue = input.value;
+
+    // Remove caracteres não numéricos
+    inputValue = inputValue.replace(/[^0-9]/g, '');
+
+    // Converte para o formato de moeda
+    inputValue = (Number(inputValue) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    // Define o valor formatado de volta no campo de input
+    input.value = inputValue;
+}
+

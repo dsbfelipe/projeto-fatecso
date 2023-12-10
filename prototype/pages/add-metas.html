@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Hedvig+Letters+Serif:opsz@12..24&family=Poppins:wght@300;400;500&display=swap"
         rel="stylesheet">
     <title>Nova meta</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="./add-metas.css">
     <script defer src="../js/script.js"></script>
 </head>
 
@@ -37,8 +37,8 @@
         <div class="container-body">
             <div class="input-container">
                 <i class="fa-solid fa-piggy-bank fa-2x"></i>
-                <input type="number" id="valor-meta" class="form-control" placeholder="Valor inicial" step="0.01"
-                    style="border: none;" />
+                <input type="text" id="valor-meta" class="form-control" placeholder="Valor inicial" 
+                    oninput="formatarMoeda(this)" />
             </div>
             <hr class="separator">
             <div class="input-container">
