@@ -1,0 +1,134 @@
+
+/* CSS GRUPOS */
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.container {
+    height: 50vh; /* Define a altura da viewport */
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px; /* Define o posicionamento relativo para a sobreposição */
+  }
+  
+  .quadrado {
+    width: 170px; /* Aumentei um pouco o tamanho do quadrado para acomodar o botão */
+    height: 170px; /* Aumentei um pouco o tamanho do quadrado para acomodar o botão */
+    background-color: #6581FC;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Altera a direção dos itens para serem um em cima do outro */
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;/* Define o posicionamento relativo para a sobreposição */
+  }
+  
+  .imagem-sobreposta {
+    width: 90px; /* Redimensionando o tamanho da imagem */
+    height: 90px; /* Redimensionando o tamanho da imagem */
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+  
+  /* Estilos para o botão */
+  .botao-titulo {
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #415bcc;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px; /* Espaçamento acima do botão */
+    position: absolute; /* Posicionamento absoluto para o botão */
+    bottom: 10px; /* Distância do botão em relação ao fundo do quadrado */
+  }
+
+  /* Search bar */
+  .botao-criar-grupo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .botao-criar-grupo button {
+    border-radius: 20px;
+    background-color: white;
+    color: #415bcc;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .botao-criar-grupo button:hover {
+    background-color: blue;
+    color: white;
+  }
+
+/* css menu grupos */
+
+.profile-picture {
+    margin-top: 20px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+}
+
+  body {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-topo {
+    background-color: white;
+    border-radius: 0 0 20px 20px; 
+    border-bottom: 1px solid #ccc; 
+    padding: 10px 0 30px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 999; 
+}
+
+.menu {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    color: blue;
+}
+
+.h1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}

@@ -14,7 +14,8 @@
 .custom-options label,
 .custom-options select,
 .custom-options input[type="date"] {
-    margin-bottom: 4px;
+
+    margin-bottom: 20px;
     /* Adiciona espaçamento entre os elementos */
 }
 
@@ -34,7 +35,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: rgba(255, 255, 255, 0.897);
+    background-color: #ECF3FB;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -213,4 +214,3 @@ footer {
 .material-icons.white600 {
     color: rgb(255, 255, 255);
 }
-
