@@ -80,10 +80,23 @@ resetButtonForm.addEventListener('click', () => {
 });
 
 
-//script para mensagem de concluido transacoes
+
+
+function toggleSharingList() {
+    const inputPerfil = document.getElementById('inputPerfil');
+    const sharingList = document.getElementById('sharing-list');
+
+    if (inputPerfil.value === '2' || inputPerfil.value === '3' || inputPerfil.value === '4') {
+        sharingList.style.display = 'block';
+    } else {
+        sharingList.style.display = 'none';
+    }
+}
+
+
 function showMessage() {
     // Inicializa originalValues
-    originalValues = {};
+    const originalValues = {};
 
     alert("Concluído!"); // Você pode usar outros métodos para exibir a mensagem
     const originalPlaceholders = {
@@ -124,20 +137,31 @@ function showMessage() {
         item.checked = false;
     });
 
+    // Desmarca o checkbox "Todos"
+    const checkAll = document.getElementById('check-all');
+    if (checkAll) {
+        checkAll.checked = false;
+    }
+
     // Redefine o estado do checkbox recorrente
     const inputRecorrente = document.getElementById('inputRecorrente');
     if (inputRecorrente) {
         inputRecorrente.checked = false;
     }
 
-    // Ativa o checkbox "Todos"
-    const checkAll = document.getElementById('check-all');
-    if (checkAll) {
-        checkAll.checked = false;
-        checkAll.disabled = true;
-    }
+    // Oculta a recorrente-options
     const recorrenteOptions = document.querySelector('.recorrente-options');
     if (recorrenteOptions) {
         recorrenteOptions.style.display = 'none';
     }
+
+    // Atualiza o estado do Alpine.js para ocultar a sharing-list
+    if (window.Alpine) {
+        window.Alpine.effect(() => {
+            window.Alpine.store('showSharingList', false);
+        });
+    }
+
+    const sharingList = document.getElementById('sharing-list');
+        sharingList.style.display = 'none';
 }

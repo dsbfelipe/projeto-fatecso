@@ -38,7 +38,7 @@
 
         <div class="container-body">
             <div class="input-container">
-                <select id="inputPerfil" class="form-control">
+                <select id="inputPerfil" class="form-control" onchange="toggleSharingList()">
                     <option value="" disabled selected>Onde você quer adicionar?</option>
                     <option value="1">Pessoal</option>
                     <option value="2">Grupo Família</option>
@@ -46,17 +46,19 @@
                     <option value="4">Viagem Praia</option>
                 </select>
             </div>
+            
             <div class="input-container">
                 <label for="inputTipo" class="label-transacoes"> Tipo</label>
-                <select id="inputTipo" class="form-control ">
+                <select id="inputTipo" class="form-control">
                     <option value="" disabled selected>Selecione o tipo</option>
                     <option value="1">Despesa</option>
                     <option value="2">Receita</option>
                 </select>
             </div>
+            
             <div class="input-container">
                 <label for="inputCategoria" class="label-transacoes"> Categoria</label>
-                <select id="inputCategoria" class="form-control ">
+                <select id="inputCategoria" class="form-control">
                     <option value="" disabled selected>Selecione a categoria</option>
                     <option value="1">Alimentação</option>
                     <option value="2">Mercado</option>
@@ -64,13 +66,14 @@
                     <option value="4">Pet</option>
                 </select>
             </div>
+            
             <div class="input-container">
                 <label for="inputDescricao" class="label-transacoes"> Descrição</label>
-                <input type="text" id="inputDescricao" class="form-control" id="icone-transacao"
-                    placeholder="Inserir descrição">
+                <input type="text" id="inputDescricao" class="form-control" id="icone-transacao" placeholder="Inserir descrição">
             </div>
-            <div class="input-container">
-                <label for="sharing-list" class="label-transacoes">Dividir com:</label>
+            
+            <div class="input-container" id="sharing-list" style="display: none;">
+                <label for="my-list" class="label-transacoes">Dividir com:</label>
                 <div class="sharing-list">
                     <ul id="my-list">
                         <li>
@@ -92,37 +95,38 @@
                             <input type="checkbox" class="check-item" /> Rute Silva
                         </li>
                     </ul>
-
-                </div>
-
-                <div class="mb-4 mt-2">
-                    <label for="inputRecorrente" class="label-transacoes">
-                        <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
-                        Recorrente
-                    </label>
-                    <br>
-                    <div class="recorrente-options">
-                        <label for="frequency" class="frequency">Escolha a frequência:</label>
-                        <select id="frequency" class="form-control">
-                            <option value="every-15-days">A cada 15 dias</option>
-                            <option value="every-7-days">A cada 7 dias</option>
-                            <option value="monthly">Mensalmente</option>
-                            <option value="daily">Todo dia</option>
-                            <option value="annually">Anualmente</option>
-                        </select>
-                        <br>
-
-                        <label for="customDate" class="frequency">Data:</label>
-                        <input type="date" id="customDate" class="form-control custom-date">
-                    </div>
-                </div>
-
-                <div class="container-footer">
-                    <div class="button-container" onclick="showMessage()">
-                        <i class="fa-regular fa-circle-check fa-3x"></i>
-                    </div>
                 </div>
             </div>
+            
+            <div class="mb-4 mt-2">
+                <label for="inputRecorrente" class="label-transacoes">
+                    <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
+                    Recorrente
+                </label>
+                <br>
+                <div class="recorrente-options">
+                    <label for="frequency" class="frequency">Escolha a frequência:</label>
+                    <select id="frequency" class="form-control">
+                        <option value="every-15-days">A cada 15 dias</option>
+                        <option value="every-7-days">A cada 7 dias</option>
+                        <option value="monthly">Mensalmente</option>
+                        <option value="daily">Todo dia</option>
+                        <option value="annually">Anualmente</option>
+                    </select>
+                    <br>
+                    <label for="customDate" class="frequency">Data:</label>
+                    <input type="date" id="customDate" class="form-control custom-date">
+                </div>
+            </div>
+            
+            <div class="container-footer">
+                <div class="button-container" onclick="showMessage()">
+                    <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
+            </div>
+
+               
+
             <footer>
             </footer>
 </body>
