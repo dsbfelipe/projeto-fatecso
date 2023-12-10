@@ -59,7 +59,7 @@ h1 {
 }
 
 .container-header {
-    padding: 1.5rem;
+    padding: 1rem;
     flex-direction: column;
     /*max-width: 640px;
     display: flex;
@@ -75,6 +75,9 @@ h1 {
     /*width: 100vw;*/
     height: 100vh;
     background-size: cover;
+    overflow-y: auto;
+    max-height: 90vh;
+
 }
 
 .input-container {
@@ -198,6 +201,36 @@ h1 {
     height: 90px;
     max-height: 90px;
     overflow-y: scroll;
+}
+
+
+.recorrente-options {
+   
+    flex-direction: column;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #6581FC;
+    border-radius: 22px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 99%;
+}
+
+.recorrente-options.active {
+    color: rgb(0, 0, 0);
+    pointer-events: all;
+    }
+
+.frequency {
+    margin: 1px;
+    font-size: large;
+    margin-left: 1rem;
+}
+
+#frequency,
+#customDate {
+    width: 100%;
 }
 
 .container-footer {
