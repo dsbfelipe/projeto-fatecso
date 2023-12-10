@@ -7,53 +7,53 @@ body, html {
     align-items: center;
   }
 .container {
-    height: 50vh; /* Define a altura da viewport */
+    height: 50vh; 
     display: flex;
     align-items: center;
     position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 50px; /* Define o posicionamento relativo para a sobreposição */
+    margin-top: 50px; 
   }
   
   .quadrado {
-    width: 170px; /* Aumentei um pouco o tamanho do quadrado para acomodar o botão */
-    height: 170px; /* Aumentei um pouco o tamanho do quadrado para acomodar o botão */
+    width: 170px; 
+    height: 170px; 
     background-color: #6581FC;
     border-radius: 15px;
     display: flex;
-    flex-direction: column; /* Altera a direção dos itens para serem um em cima do outro */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
     position: relative;
     margin-right: 10px;
     margin-left: 10px;
-    margin-bottom: 20px;/* Define o posicionamento relativo para a sobreposição */
+    margin-bottom: 20px;
   }
   
   .imagem-sobreposta {
-    width: 90px; /* Redimensionando o tamanho da imagem */
-    height: 90px; /* Redimensionando o tamanho da imagem */
+    width: 90px; 
+    height: 90px; 
     border-radius: 15px;
     margin-bottom: 40px;
   }
   
   /* Estilos para o botão */
   .botao-titulo {
-    background-color: #ffffff; /* Cor de fundo do botão */
+    background-color: #ffffff; 
     color: #415bcc;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 12px;
     cursor: pointer;
-    margin-top: 10px; /* Espaçamento acima do botão */
-    position: absolute; /* Posicionamento absoluto para o botão */
-    bottom: 10px; /* Distância do botão em relação ao fundo do quadrado */
+    margin-top: 10px; 
+    position: absolute; 
+    bottom: 10px; 
   }
 
-  /* Search bar */
+  
   .botao-criar-grupo {
     display: flex;
     justify-content: center;
@@ -117,9 +117,6 @@ body, html {
     cursor: pointer;
 }
 
-.menu-item:hover {
-    color: blue;
-}
 
 .h1 {
     margin-top: 20px;
@@ -130,6 +127,6 @@ body, html {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Poppins', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
 }
