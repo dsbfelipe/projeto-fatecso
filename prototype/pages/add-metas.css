@@ -82,6 +82,7 @@ h1 {
     padding: 1rem;
     display: inline-block;
     margin: 0 auto;
+    margin-top: 2%;
     color: #051455be;
 }
 
@@ -101,7 +102,7 @@ h1 {
 .container-footer{
     align-items: center;
     justify-content: center;
-    margin: 20vh 0 0;
+    margin: 18vh 0 0;
     display: flex;
 }
 
