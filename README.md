@@ -88,8 +88,8 @@
 ## Protótipo em baixa fidelidade:
 <br>
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="documentation/Prototype.svg" />
-<source media="(prefers-color-scheme: light)" srcset="documentation/Prototype.svg" />
+<source media="(prefers-color-scheme: dark)" srcset="documentation/Prototype.png" />
+<source media="(prefers-color-scheme: light)" srcset="documentation/Prototype.png" />
 <img width="30%">
 </picture>
 
