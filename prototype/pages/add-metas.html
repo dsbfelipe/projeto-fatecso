@@ -39,6 +39,16 @@
 
         <div class="container-body">
             <div class="input-container">
+                <select id="inputPerfil" class="form-control" onchange="toggleSharingList()">
+                    <option value="" disabled selected>Onde você quer adicionar?</option>
+                    <option value="1">Pessoal</option>
+                    <option value="2">Grupo Família</option>
+                    <option value="3">Churrasco fim de ano</option>
+                    <option value="4">Viagem Praia</option>
+                </select>
+            </div>
+            <hr class="separator">
+            <div class="input-container">
                 <i class="fa-solid fa-piggy-bank fa-2x"></i>
                 <input type="text" id="valor-meta" class="form-control" placeholder="Valor inicial"
                     oninput="formatarMoeda(this)" />
