@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="height: 100vh; max-height: 100vh;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Grupos</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="grupos.css">
+  <link rel="stylesheet" href="criar-grupos.css">
+  <script defer src="../js/script.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+  
+
+    <div class="menu-criar">
+        <div class="menucriar">
+            <img class="profile-picture" src="../images/profile-picture.jpeg" alt="Foto de perfil do usuário">
+            <div class="h1">
+                <h1>Administrador</h1>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="nomegrupo">
+        <label for="inputDescricao" class="block text-sm">Nome do grupo:</label>
+        <input type="text" id="inputDescricao" class="w-full form-control border border-gray-300 rounded-md py-1"
+          placeholder="  Adicionar nome">
+      </div>
+     
+   
+    <div class="checkbox-todos">
+        <label for="checkboxTodos" class="labelWithImg">
+          Todos
+          <input type="checkbox" id="checkboxTodos" class="custom-checkbox">
+        </label>
+      </div>
+      
+
+    <div class="checkboxContainer">
+        <label for="checkbox1" class="labelWithImg">
+            <img src="../images/lauri.jpeg" alt="amigo1">
+            Lauri Ellen Santinelli Biral
+            <input type="checkbox" id="checkbox1" name="meuCheckbox1">
+        </label>
+        
+        <label for="checkbox2" class="labelWithImg">
+            <img src="../images/pilantra.jpeg" alt="amigo2">
+            Felipe dos Santos Bento
+            <input type="checkbox" id="checkbox2" name="meuCheckbox2">
+        </label>
+        
+        <label for="checkbox3" class="labelWithImg">
+            <img src="../images/mariana.jpeg" alt="amigo3">
+            Mariana Parducci
+            <input type="checkbox" id="checkbox3" name="meuCheckbox3">
+        </label>
+        
+        <label for="checkbox4" class="labelWithImg">
+            <img src="../images/leo_romantico.jpeg" alt="amigo4">
+            Leonardo Hyppolito
+            <input type="checkbox" id="checkbox4" name="meuCheckbox4">
+        </label>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const checkboxTodos = document.getElementById('checkboxTodos');
+          const checkboxes = document.querySelectorAll('.checkboxContainer input[type="checkbox"]:not(#checkboxTodos)');
+      
+          checkboxTodos.addEventListener('change', function() {
+            checkboxes.forEach(function(checkbox) {
+              checkbox.checked = checkboxTodos.checked;
+            });
+          });
+      
+          checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+              if (!this.checked) {
+                checkboxTodos.checked = false;
+              } else {
+                const allChecked = Array.from(checkboxes).every(function(input) {
+                  return input.checked;
+                });
+                checkboxTodos.checked = allChecked;
+              }
+            });
+          });
+        });
+      </script>
+
+      <button type="button" class="btnicon">
+        <img src="../images/add-user.png" alt="add user">
+      </button>   
+      
+      <button type="button" class="btncheck">
+        <img src="../images/checkicon.png" alt="Concluir" onclick="validarGrupo()">
+      </button> 
+
+      <script>
+        function validarGrupo() {
+          const nomeGrupo = document.getElementById('inputDescricao').value.trim();
+          const checkboxes = document.querySelectorAll('.checkboxContainer input[type="checkbox"]:not(#checkboxTodos)');
+          let peloMenosUmSelecionado = false;
+    
+          checkboxes.forEach(function(checkbox) {
+            if (checkbox.checked) {
+              peloMenosUmSelecionado = true;
+            }
+          });
+    
+          if (nomeGrupo !== '' && peloMenosUmSelecionado) {
+            alert('Concluído');
+          } else {
+            alert('Por favor, preencha todos os campos.');
+          }
+        }
+      </script>
+
+    <footer>
+        <button class="navbar-buttom" type="button"><span class="material-icons md-36" onclick="trocarPagina('/prototype/index.html')" >home</span></button>
+        <button class="navbar-buttom" type="button"><span class="material-icons md-36" onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
+        <button class="navbar-buttom" type="button"><span class="material-icons md-36">flight</span></button>
+        <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span class="material-icons md-36">done_all</span></button>
+        <button class="navbar-buttom" type="button"><span class="material-icons md-36">person</span></button>
+    </footer>
+
+</body>
+</html>
