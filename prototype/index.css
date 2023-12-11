@@ -85,6 +85,7 @@ footer {
     align-items: center;
     display: flex;
     justify-content: center;
+    border: 1px solid rgb(205, 219, 224)
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
