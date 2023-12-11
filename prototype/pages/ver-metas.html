@@ -8,8 +8,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <script src="/prototype/js/script.js"></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js" defer></script>
     </head>
-    <body>
+    <body x-data="{ isOpen: false }">
         <div class="title">
             <p class="title-text">Metas</p>
         </div>
@@ -96,14 +99,33 @@
 
 
 
-        <button class="add-new" type="button"><span class="material-icons white600">add</span></button>
+        <body x-data="{ isOpen: false }">
+            <div class="fixed-bottom-right">
+         <button class="add-new" @click="isOpen = !isOpen">
+             <span class="material-icons white600">add</span>
+         </button>
+         
+         <div x-show="isOpen" class="dropup-content">
+             <div class="conteudo-dropmenu">
+                 <a href="#" @click="trocarPagina('/prototype/pages/add-transacao.html')">Nova Transação</a>
+             </div>
+             <div class="conteudo-dropmenu">
+                 <a href="#" @click="trocarPagina('/prototype/pages/add-transacao.html')">Novo Grupo </a>
+             </div>
+             <div class="conteudo-dropmenu">
+                 <a href="#" @click="trocarPagina('/prototype/pages/add-metas.html')">Nova Meta </a>
+             </div>
+         </div>
+     </div>
 
-        <footer>
-            <button class="navbar-buttom" type="button"><span class="material-icons md-36" onclick="trocarPagina('/prototype/index.html')" >home</span></button>
-            <button class="navbar-buttom" type="button"><span class="material-icons md-36" onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
-            <button class="navbar-buttom" type="button"><span class="material-icons md-36">flight</span></button>
-            <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span class="material-icons md-36">done_all</span></button>
-            <button class="navbar-buttom" type="button"><span class="material-icons md-36">person</span></button>
-        </footer>
+     <footer>
+        <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')"><span
+                class="material-icons md-36">home</span></button>
+        <button class="navbar-buttom" type="button"><span class="material-icons md-36"
+                onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
+        <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span
+                class="material-icons md-36">done_all</span></button>
+
+    </footer>
     </body>
 </html>

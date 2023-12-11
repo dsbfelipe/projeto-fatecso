@@ -54,3 +54,10 @@ function showMessage() {
     clearData('inputValorMeta', 'valor-meta', 'nome-meta', 'data-meta', 'descricao-meta');
 }
 
+const menuFloating = document.querySelector(".menu-floating");
+
+function openMenu() {
+  menuFloating.style.display = "block";
+}
+
+document.querySelector(".add-new").addEventListener("click", openMenu);

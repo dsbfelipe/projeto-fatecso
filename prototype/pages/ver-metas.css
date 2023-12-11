@@ -36,7 +36,7 @@ footer {
     border-radius: 50%;
     border: none;
     background-color: var(--azul);
-    position: fixed;
+    position: absolute;
     bottom: 9%;
     right: 7%;
     opacity: 0.7;
@@ -46,6 +46,47 @@ footer {
 .add-new:hover {
     opacity: 1;
 }
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+   
+    z-index: 1;
+    margin-top: -220px;
+    right: 10px;
+}
+
+.add-new:hover+.dropup-content,
+.dropup-content:hover {
+    display: block;
+}
+
+.dropup-content a {
+    color: black;
+    padding: 1px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropup-content a:hover {
+    color: black;
+}
+
+.conteudo-dropmenu {
+    font-family: poppins;
+    margin-bottom: 0.6rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border-width: 1px;
+    box-shadow: 0px 4px 6px -6px rgba(124, 124, 124);
+    border-radius: 22px;
+    background-color: #ffffff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 
 .title {
     height: 45px;
