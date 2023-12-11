@@ -72,8 +72,14 @@
     </div>
   </div>
   <div class="botao-criar-grupo">
-    <button>Criar novo grupo</button>
-  </div>
+    <button onclick="redirecionarParaNovaPagina()">Criar novo grupo</button>
+</div>
+
+<script>
+  function redirecionarParaNovaPagina() {
+    window.location.href = 'criar-grupos.html';
+  }
+</script>
   <footer>
     <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')"><span
             class="material-icons md-36">home</span></button>
