@@ -63,12 +63,7 @@ h1 {
 .container-header {
     padding: 1.5rem;
     flex-direction: column;
-    /*max-width: 640px;
-    display: flex;
-    flex: 1;
-    overflow-y: auto;
-    max-height: 90vh;*/
-}
+ }
 
 
 .container-body {
