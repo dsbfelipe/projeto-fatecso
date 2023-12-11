@@ -93,6 +93,7 @@ function toggleSharingList() {
     }
 }
 
+//funcao btn concluir
 
 function showMessage() {
     // Inicializa originalValues

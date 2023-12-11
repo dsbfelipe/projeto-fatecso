@@ -29,7 +29,8 @@ function showMessage() {
         'valor-meta': 'Valor inicial',
         'nome-meta': 'Nome da meta',
         'data-meta': 'Data final',
-        'descricao-meta': 'Descrição'
+        'descricao-meta': 'Descrição',
+        'inputPerfil': 'Selecione',
     };
 
     function clearData(...elementIds) {
@@ -51,7 +52,7 @@ function showMessage() {
 
 
     // Clear the data for multiple input fields
-    clearData('inputValorMeta', 'valor-meta', 'nome-meta', 'data-meta', 'descricao-meta');
+    clearData('inputValorMeta','inputPerfil', 'valor-meta', 'nome-meta', 'data-meta', 'descricao-meta');
 }
 
 const menuFloating = document.querySelector(".menu-floating");
