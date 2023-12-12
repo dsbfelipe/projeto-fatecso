@@ -64,6 +64,7 @@
                     <option value="2">MERCADO</option>
                     <option value="3">TRANSPORTE</option>
                     <option value="4">PET</option>
+                    <option value="4"></option>
                     <option value="5">Outro</option>
                     <option value="" disabled>Categorias adicionadas pelo usuário:</option>
                 </select>
@@ -87,7 +88,7 @@
                         inputField.style.display = "none";
                         botaoAdicionar.style.display = "none";
 
-                        // Verifica se a opção selecionada foi adicionada pelo usuário (índice maior ou igual a 5)
+                       
                         if (selectElement.selectedIndex >= 5) {
                             botaoDeletar.style.display = "block";
                         } else {
