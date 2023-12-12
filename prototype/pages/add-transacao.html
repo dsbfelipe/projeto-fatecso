@@ -69,6 +69,7 @@
                 </select>
                 <input type="text" id="outraCategoria" class="form-control" style="display: none;" placeholder="Digite a nova categoria">
                 <button id="botaoAdicionar" onclick="adicionarCategoria()" style="display: none; margin-left: 15px;">Adicionar</button>
+                <button id="botaoDeletar" onclick="deletarCategoria()" style="display: none; margin-left: 15px;">Deletar categoria</button>
             </div>
             
             <script>
@@ -76,13 +77,18 @@
                     var selectElement = document.getElementById("inputCategoria");
                     var inputField = document.getElementById("outraCategoria");
                     var botaoAdicionar = document.getElementById("botaoAdicionar");
+                    var botaoDeletar = document.getElementById("botaoDeletar");
             
-                    if (selectElement.value === "5") { // "Outro" option selected
+                    if (selectElement.value === "5") {
                         inputField.style.display = "block";
                         botaoAdicionar.style.display = "block";
+                        botaoDeletar.style.display = "none";
+                        document.querySelector('.input-container').style.width = '100%'; // Expandir a div de categoria
                     } else {
                         inputField.style.display = "none";
                         botaoAdicionar.style.display = "none";
+                        botaoDeletar.style.display = "block";
+                        document.querySelector('.input-container').style.width = ''; // Reverter para largura padrão
                     }
                 }
             
@@ -90,27 +96,50 @@
                     var selectElement = document.getElementById("inputCategoria");
                     var inputField = document.getElementById("outraCategoria");
                     var botaoAdicionar = document.getElementById("botaoAdicionar");
-                    var novaCategoria = inputField.value.trim().toUpperCase(); // Converter para maiúsculas
+                    var botaoDeletar = document.getElementById("botaoDeletar");
+                    var novaCategoria = inputField.value.trim().toUpperCase(); 
             
                     if (novaCategoria !== "") {
-                        // Cria um novo elemento de opção
+                        
+                        var categoriasExistentes = Array.from(selectElement.options).map(option => option.text.toUpperCase());
+                        if (categoriasExistentes.includes(novaCategoria)) {
+                            alert("Esta categoria já existe. Por favor, escolha um nome diferente.");
+                            return;
+                        }
+            
+                        
                         var novaOpcao = document.createElement("option");
-                        novaOpcao.value = novaCategoria; // Define o valor como a categoria digitada
+                        novaOpcao.value = novaCategoria; 
                         novaOpcao.text = novaCategoria;
             
-                        // Adiciona a nova opção ao select
+                        
                         selectElement.appendChild(novaOpcao);
             
-                        // Define a nova opção como selecionada
+                        
                         selectElement.value = novaCategoria;
             
-                        // Limpa o campo de texto e oculta-o
+                       
                         inputField.value = "";
                         inputField.style.display = "none";
                         botaoAdicionar.style.display = "none";
+                        botaoDeletar.style.display = "block";
+                    }
+                }
+            
+                function deletarCategoria() {
+                    var selectElement = document.getElementById("inputCategoria");
+                    var selectedOptionIndex = selectElement.selectedIndex;
+            
+                  
+                    if (selectedOptionIndex >= 5) {
+                        selectElement.remove(selectedOptionIndex);
+                    } else {
+                        alert("Não é possível deletar esta categoria.");
                     }
                 }
             </script>
+            
+            
             
             
             

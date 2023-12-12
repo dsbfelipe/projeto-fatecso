@@ -251,3 +251,14 @@ h1 {
     cursor: pointer;
     margin-left: 5px;
 }
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.input-container .form-control {
+    flex-grow: 1;
+}
