@@ -87,7 +87,14 @@
                     } else {
                         inputField.style.display = "none";
                         botaoAdicionar.style.display = "none";
-                        botaoDeletar.style.display = "block";
+            
+                        // Verifica se a opção selecionada é uma categoria adicionada pelo usuário
+                        if (selectElement.options[selectElement.selectedIndex].disabled) {
+                            botaoDeletar.style.display = "block";
+                        } else {
+                            botaoDeletar.style.display = "none";
+                        }
+            
                         document.querySelector('.input-container').style.width = ''; // Reverter para largura padrão
                     }
                 }
@@ -100,25 +107,15 @@
                     var novaCategoria = inputField.value.trim().toUpperCase(); 
             
                     if (novaCategoria !== "") {
-                        
-                        var categoriasExistentes = Array.from(selectElement.options).map(option => option.text.toUpperCase());
-                        if (categoriasExistentes.includes(novaCategoria)) {
-                            alert("Esta categoria já existe. Por favor, escolha um nome diferente.");
-                            return;
-                        }
-            
-                        
                         var novaOpcao = document.createElement("option");
                         novaOpcao.value = novaCategoria; 
                         novaOpcao.text = novaCategoria;
-            
+                        novaOpcao.disabled = true; // Marca a nova opção como desabilitada para identificar que foi adicionada pelo usuário
                         
                         selectElement.appendChild(novaOpcao);
-            
                         
                         selectElement.value = novaCategoria;
-            
-                       
+                        
                         inputField.value = "";
                         inputField.style.display = "none";
                         botaoAdicionar.style.display = "none";
@@ -130,14 +127,20 @@
                     var selectElement = document.getElementById("inputCategoria");
                     var selectedOptionIndex = selectElement.selectedIndex;
             
-                  
-                    if (selectedOptionIndex >= 5) {
-                        selectElement.remove(selectedOptionIndex);
-                    } else {
+                    if (selectedOptionIndex >= 0 && !selectElement.options[selectedOptionIndex].disabled) {
                         alert("Não é possível deletar esta categoria.");
+                    } else if (selectedOptionIndex >= 0) {
+                        selectElement.remove(selectedOptionIndex);
+                        // Após remover, verifica se a nova opção selecionada não é uma categoria adicionada pelo usuário
+                        if (!selectElement.options[selectElement.selectedIndex].disabled) {
+                            document.getElementById("botaoDeletar").style.display = "none";
+                        }
                     }
                 }
             </script>
+            
+            
+            
             
             
             

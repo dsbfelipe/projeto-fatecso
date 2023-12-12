@@ -253,12 +253,12 @@ h1 {
 }
 
 .input-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
 
-.input-container .form-control {
-    flex-grow: 1;
-}
+    .input-container .form-control {
+        flex-grow: 1;
+    }
