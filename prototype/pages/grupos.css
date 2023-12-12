@@ -248,3 +248,20 @@ body, html {
   color: rgb(255, 255, 255);
 }
 
+.navbar-buttom {
+  width: 100%;
+  height: 13vw;
+  border: none;
+  border-top: 1px rgb(233, 233, 233) solid;
+  background-color: white;
+}
+
+#btnGrupos {
+  color: #415bcc;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+

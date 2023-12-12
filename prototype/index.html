@@ -19,7 +19,7 @@
         <img class="profile-picture" src="images/profile-picture.jpeg" alt="Foto de perfil do usuário">
         <img class="pro-icon" src="images/pro-icon.png" alt="Selo de membro PRO">
         <h1 class="center welcome">Bem vindo(a) de volta!</h1>
-        
+
         <div class="input-container">
             <select id="inputPerfil" class="form-control" onchange="toggleSharingList()">
                 <option value="0">Visualizar anos anteriores</option>
@@ -126,27 +126,32 @@
 
         <div x-show="isOpen" class="dropup-content">
             <div class="conteudo-dropmenu">
-              <a href="#" @click="trocarPagina('/prototype/pages/add-transacao.html')">Nova Transação</a>
+                <a href="#" @click="trocarPagina('/prototype/pages/add-transacao.html')">Nova Transação</a>
             </div>
             <div class="conteudo-dropmenu">
-              <a href="#" @click="trocarPagina('/prototype/pages/add-metas.html')">Nova Meta </a>
+                <a href="#" @click="trocarPagina('/prototype/pages/add-metas.html')">Nova Meta </a>
             </div>
             <div class="conteudo-dropmenu">
-              <a href="#" @click="trocarPagina('/prototype/pages/criar-grupos.html')">Novo Grupo </a>
+                <a href="#" @click="trocarPagina('/prototype/pages/criar-grupos.html')">Novo Grupo </a>
             </div>
             <div class="conteudo-dropmenu">
-              <a href="#" @click="trocarPagina('/prototype/pages/criar-eventos.html')">Novo Evento </a>
+                <a href="#" @click="trocarPagina('/prototype/pages/criar-eventos.html')">Novo Evento </a>
             </div>
-          </div>
+        </div>
     </div>
 
     <footer>
-        <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')"><span
-                class="material-icons md-36">home</span></button>
-        <button class="navbar-buttom" type="button"><span class="material-icons md-36"
-                onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
-        <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span
-                class="material-icons md-36">done_all</span></button>
+        <button id="btnHome" class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')">
+            <span class="material-icons md-36">home</span>
+        </button>
+        <button id="btnGrupos" class="navbar-buttom" type="button"
+            onclick="trocarPagina('/prototype/pages/grupos.html')">
+            <span class="material-icons md-36">people</span>
+        </button>
+        <button id="btnMetas" class="navbar-buttom" type="button"
+            onclick="trocarPagina('/prototype/pages/ver-metas.html')">
+            <span class="material-icons md-36">done_all</span>
+        </button>
 
     </footer>
 </body>

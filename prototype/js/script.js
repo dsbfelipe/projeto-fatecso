@@ -119,3 +119,5 @@ function trocarPagina(url) {
     window.location.href = url;
 }
 
+
+

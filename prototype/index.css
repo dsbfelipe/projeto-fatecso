@@ -18,6 +18,10 @@ footer {
     background-color: white;
 }
 
+#btnHome {
+    color: #465eca;
+}
+
 .material-icons.md-36 {
     font-size: 36px;
 }
