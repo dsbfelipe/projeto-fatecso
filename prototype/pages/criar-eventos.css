@@ -8,10 +8,6 @@
 
 }
 
-.full-page {
-    background-color: #ECF3FB;
-}
-
 .icon-wrapper {
     color: #051455be;
     background-color: transparent;
@@ -60,41 +56,20 @@ header h1 {
 .container-header {
     padding: 1rem;
     border-radius: 0 0 30px 30px;
-    margin-bottom: 10px;
+    background-color: #ECF3FB;
 }
 
 /*------------------------------------------------------------------*/
 
-
-.checkboxTodos {
-    position: fixed;
-    border: 2px solid #ffffff;
-    border-radius: 20px 20px 0 0;
-    background-color: white;
-    align-items: flex-end; /* Alinhar à direita */
-    padding: 10px; /* Adicionar espaçamento interno */
-    font-family: poppins;
-    font-size: 22px;
-    right: 0; 
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.checkboxTodos input[type="checkbox"] {
-    width: 25px;
-    height: 25px;
-    margin-left: 10px;
-    
-}
-
 .container-body {
-    border-radius: 30px 30px 0 0;
-    background-color: #ffffff;
-    height: 59vh;
+    border-radius: 30px 30px;
+    background-color: #ECF3FB;
+    border-radius: 30px 30px 30px 30px ;
+    height: 90vh;
     background-size: cover;
     overflow-y: auto;
-    max-height: 55vh;
-    margin-top: 10px;
+    max-height: 70vh;
+    margin-top: 20px;
 }
 
 .input-container {
@@ -104,7 +79,7 @@ header h1 {
     color: #051455be;
 }
 
-#inputNome {
+#inputDescricao, #inputNome, #inputData,#inputPerfil {
     width: 100%;
     max-width: 100%;
     font-size: 20px;
@@ -116,37 +91,24 @@ header h1 {
     box-sizing: border-box;
 }
 
-.checkbox-list {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    font-size: 22px;
+
+
+#labelInput {
+    margin-left: 5px;
+    font-size: large;
+}
+
+#inputData{
+    text-align: center;
+}
+
+.form-control {
+    padding-left: 1rem;
+    font-size: 20px;
     font-family: poppins;
+    outline: none;
 }
 
-.labelWithImg {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.labelWithImg img {
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.labelWithImg input[type="checkbox"] {
-    width: 25px;
-    height: 25px;
-    margin-left: auto;
-}
-
-
-/*------------------------------------------------*/
 
 .container-footer {
     align-items: center;
@@ -154,15 +116,13 @@ header h1 {
     display: flex;
     width: 100%;
     background-color: #fff;
-
-
+    margin-top: 10px;
 }
 
 .fa-regular.fa-circle-check {
     color: #6581FC;
 
 }
-
 .button-container {
     cursor: pointer;
 }

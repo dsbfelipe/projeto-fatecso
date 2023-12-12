@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <link rel="stylesheet" href="./criar-eventos.css">
+  <script defer src="./criar-eventos.js"></script>
+
+  <title>Novo evento</title>
+</head>
+
+
+<body>
+  <div class="container-header">
+    <header>
+      <button class="btn-voltar" type="button" onclick="trocarPagina('/prototype/index.html')">
+        <span class="icon-wrapper">
+          <i class="fa-solid fa-arrow-left"></i>
+        </span>
+      </button>
+
+      <h1>
+        <img class="profile-picture" src="../images/profile-picture.jpeg" alt="Foto de perfil do usuário">
+        Administrador
+      </h1>
+    </header>
+    <div class="textCriar">
+      Criar evento
+    </div>
+  </div>
+
+  <div class="container-body">
+    <div class="input-container">
+      <label for="form-control" id="labelInput">Nome</label>
+      <input type="text" id="inputNome" class="form-control" id="icone-transacao"
+        placeholder="  Inserir nome do evento">
+    </div>
+
+    <div class="input-container">
+      <label for="form-control" id="labelInput">Em qual grupo?</label>
+      <select id="inputPerfil" class="form-control">
+        <option value="" disabled selected>Selecione um grupo..</option>
+        <option value="1">Grupo Família</option>
+        <option value="2">Grupo da Firma</option>
+      </select>
+    </div>
+
+    <div class="input-container">
+      <label for="form-control" id="labelInput">Data de início</label>
+      <input type="date" id="inputData" class="form-control">
+    </div>
+
+    <div class="input-container">
+      <label for="form-control" id="labelInput">Descrição</label>
+      <input type="text" id="inputDescricao" class="form-control" id="icone-transacao" placeholder=" Inserir descrição">
+    </div>
+
+    
+  </div>
+  
+  <div class="container-footer">
+    <div class="button-container" onclick="showMessage()">
+      <i class="fa-regular fa-circle-check fa-3x"></i>
+    </div>
+</body>
+
+</html>

@@ -23,7 +23,7 @@ footer {
 }
 
 .material-symbols-outlined {
-  font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
 }
 
 .material-icons.white600 {
@@ -52,9 +52,8 @@ footer {
     display: none;
     position: fixed;
     background-color: transparent;
-   
     z-index: 1;
-    margin-top: -430px;
+    margin-top: -470px;
     right: 25px;
 }
 
@@ -155,6 +154,7 @@ body {
     color: var(--cinza);
     padding-top: 4px;
 }
+
 .meta-nome {
     margin-top: 15px;
     display: flex;
@@ -237,20 +237,27 @@ body {
     margin-bottom: 20px;
     border-radius: 20px;
 }
-.container .progress-bar{
-   position: absolute;
-   height: 100%;
-   background-color: var(--azul);
-   animation: progress-animation 5s forwards;
+
+.container .progress-bar {
+    position: absolute;
+    height: 100%;
+    background-color: var(--azul);
+    animation: progress-animation 5s forwards;
 }
-@keyframes progress-animation{
-    0% { width: 0%; } 
-    100% { width: 63%}
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 63%
+    }
 }
 
 .retirar-depositar {
-    display: flex;     
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     gap: 20px;
     flex-direction: column;
     align-items: center;
@@ -332,4 +339,3 @@ body {
     font-size: 12px;
     color: var(--cinza);
 }
-

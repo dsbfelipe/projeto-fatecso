@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-08">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title">Porkin</title>
     <link rel="stylesheet" href="index.css">
+    <script src="/prototype/js/script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="/prototype/js/script.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js" defer></script>
 </head>
@@ -37,7 +37,7 @@
 
     <div class="area-meta">
         <h1 class="quase">Quase lá...</h1>
-        <br> 
+        <br>
         <p class="quase-desc">Continue em direção ao seu objetivo!</p>
         <div class="meta">
             <div class="meta-nome">
@@ -99,35 +99,36 @@
     </div>
 
 
+    <div class="fixed-bottom-right">
+        <button class="add-new" @click="isOpen = !isOpen">
+            <span class="material-icons white600">add</span>
+        </button>
 
-    <body x-data="{ isOpen: false }">
-        <div class="fixed-bottom-right">
-            <button class="add-new" @click="isOpen = !isOpen">
-                <span class="material-icons white600">add</span>
-            </button>
-
-            <div x-show="isOpen" class="dropup-content">
-                <div class="conteudo-dropmenu">
-                    <a href="#" @click="trocarPagina('/prototype/pages/add-transacao.html')">Nova Transação</a>
-                </div>
-                <div class="conteudo-dropmenu">
-                    <a href="#" @click="trocarPagina('/prototype/pages/criar-grupos.html')">Novo Grupo </a>
-                </div>
-                <div class="conteudo-dropmenu">
-                    <a href="#" @click="trocarPagina('/prototype/pages/add-metas.html')">Nova Meta </a>
-                </div>
+        <div x-show="isOpen" class="dropup-content">
+            <div class="conteudo-dropmenu">
+              <a href="#" @click="trocarPagina('/prototype/pages/add-transacao.html')">Nova Transação</a>
             </div>
-        </div>
+            <div class="conteudo-dropmenu">
+              <a href="#" @click="trocarPagina('/prototype/pages/add-metas.html')">Nova Meta </a>
+            </div>
+            <div class="conteudo-dropmenu">
+              <a href="#" @click="trocarPagina('/prototype/pages/criar-grupos.html')">Novo Grupo </a>
+            </div>
+            <div class="conteudo-dropmenu">
+              <a href="#" @click="trocarPagina('/prototype/pages/criar-eventos.html')">Novo Evento </a>
+            </div>
+          </div>
+    </div>
 
-        <footer>
-            <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')"><span
-                    class="material-icons md-36">home</span></button>
-            <button class="navbar-buttom" type="button"><span class="material-icons md-36"
-                    onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
-            <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span
-                    class="material-icons md-36">done_all</span></button>
+    <footer>
+        <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')"><span
+                class="material-icons md-36">home</span></button>
+        <button class="navbar-buttom" type="button"><span class="material-icons md-36"
+                onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
+        <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span
+                class="material-icons md-36">done_all</span></button>
 
-        </footer>
-    </body>
+    </footer>
+</body>
 
 </html>

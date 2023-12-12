@@ -21,11 +21,11 @@
     text-align: left;
     font-size: 25px;
     pointer-events: none;
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .btn-voltar .icon-wrapper {
-  pointer-events: auto;
+    pointer-events: auto;
 }
 
 h1 {
@@ -36,8 +36,6 @@ h1 {
 }
 
 .inputMeta {
-    /*max-width: 100vw;
-    min-width: 150px;*/
     color: white;
     font-family: poppins;
     background-color: transparent;
@@ -63,7 +61,7 @@ h1 {
 .container-header {
     padding: 1.5rem;
     flex-direction: column;
- }
+}
 
 
 .container-body {
@@ -95,7 +93,7 @@ h1 {
     outline: none;
 }
 
-.container-footer{
+.container-footer {
     align-items: center;
     justify-content: center;
     margin: 4vh 0 0;
@@ -103,12 +101,11 @@ h1 {
 }
 
 .fa-regular.fa-circle-check {
-    color: #6581FC; /* Change this to the color you want */
-    
-  }
+    color: #6581FC;
+    /* Change this to the color you want */
 
-  .button-container {
+}
+
+.button-container {
     cursor: pointer;
-  }
-
-  
+}

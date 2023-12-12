@@ -27,8 +27,7 @@
 
 .custom-options {
     color: rgb(180, 180, 180);
-    /* Definindo a cor inicial como cinza */
-}
+   }
 
 body {
     margin: 0;
@@ -185,13 +184,9 @@ footer {
     display: flex;
     justify-content: space-around;
     left: 0;
-    /* Define a posição à esquerda como 0 */
     right: 0;
-    /* Define a posição à direita como 0 */
     margin-left: auto;
-    /* Define a margem à esquerda como automática */
     margin-right: auto;
-    /* Define a margem à direita como automática */
 }
 
 /* Restante do seu CSS permanece inalterado */
@@ -214,9 +209,10 @@ footer {
 .material-icons.white600 {
     color: rgb(255, 255, 255);
 }
+
 /*ate aqui*/
 
-.container-footer{
+.container-footer {
     align-items: center;
     justify-content: center;
     margin: 15vh 0 0;

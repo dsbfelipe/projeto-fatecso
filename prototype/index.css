@@ -51,11 +51,11 @@ footer {
     display: none;
     position: absolute;
     background-color: transparent;
-   
     z-index: 1;
-    margin-top: -280px;
+    margin-top: -80%;
     right: 10px;
-}
+  }
+  
 
 .add-new:hover+.dropup-content,
 .dropup-content:hover {

@@ -11,84 +11,105 @@
   <link rel="stylesheet" href="grupos.css">
   <script defer src="../js/script.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 
-<body>
+<body x-data="{ isOpen: false }">
 
-    <div class="menu-topo">
-        <div class="menu">
-            <img class="profile-picture" src="../images/profile-picture.jpeg" alt="Foto de perfil do usuário">
-            <div class="h1">
-                <h1>Grupos e amigos</h1>
-            </div>
-        </div>
+  <div class="menu-topo">
+    <div class="menu">
+      <img class="profile-picture" src="../images/profile-picture.jpeg" alt="Foto de perfil do usuário">
+      <div class="h1">
+        <h1>Grupos e amigos</h1>
+      </div>
     </div>
-    <div class="image-container">
-      <div class="image-item">
-        <img src="../images/lauri.jpeg" alt="Imagem 1" class="rounded-image">
-        <label for="image1" class="image-label">Lauri</label>
-      </div>
-      <div class="image-item">
-        <img src="../images/pilantra.jpeg" alt="Imagem 2" class="rounded-image">
-        <label for="image2" class="image-label">Felipe</label>
-      </div>
-      <div class="image-item">
-        <img src="../images/mariana.jpeg" alt="Imagem 3" class="rounded-image">
-        <label for="image3" class="image-label">Mariana</label>
-      </div>
-      <div class="image-item">
-        <img src="../images/leo_romantico.jpeg" alt="Imagem 4" class="rounded-image">
-        <label for="image4" class="image-label">Leonardo</label>
-      </div>
-      <!-- Adicione quantas imagens você quiser -->
+  </div>
+  <div class="image-container">
+    <div class="image-item">
+      <img src="../images/lauri.jpeg" alt="Imagem 1" class="rounded-image">
+      <label for="image1" class="image-label">Lauri</label>
     </div>
-    
-    
-    
+    <div class="image-item">
+      <img src="../images/pilantra.jpeg" alt="Imagem 2" class="rounded-image">
+      <label for="image2" class="image-label">Felipe</label>
+    </div>
+    <div class="image-item">
+      <img src="../images/mariana.jpeg" alt="Imagem 3" class="rounded-image">
+      <label for="image3" class="image-label">Mariana</label>
+    </div>
+    <div class="image-item">
+      <img src="../images/leo_romantico.jpeg" alt="Imagem 4" class="rounded-image">
+      <label for="image4" class="image-label">Leonardo</label>
+    </div>
+  </div>
+
+
+
   <div class="container">
     <div class="coluna">
       <div class="quadrado">
         <img src="../images/familia.png" alt="Imagem Sobreposta" class="imagem-sobreposta">
         <button class="botao-titulo">Grupo Família</button>
       </div>
-  
+
       <div class="quadrado">
         <img src="../images/churrasco.png" alt="Imagem Sobreposta" class="imagem-sobreposta">
         <button class="botao-titulo">Churrasco fim de ano</button>
       </div>
     </div>
-  
+
     <div class="coluna">
       <div class="quadrado">
         <img src="../images/viagempraia.png" alt="Imagem Sobreposta" class="imagem-sobreposta">
         <button class="botao-titulo">Viagem praia</button>
       </div>
-  
+
       <div class="quadrado">
         <img src="../images/amigos.png" alt="Imagem Sobreposta" class="imagem-sobreposta">
         <button class="botao-titulo">Amigos</button>
       </div>
     </div>
+  </div>
+  </div>
+
+  
+  <div class="fixed-bottom-right">
+    <button class="add-new" @click="isOpen = !isOpen">
+      <span class="material-icons white600">add</span>
+    </button>
+
+    <div x-show="isOpen" class="dropup-content">
+      <div class="conteudo-dropmenu">
+        <a href="#" @click="trocarPagina('/prototype/pages/add-transacao.html')">Nova Transação</a>
+      </div>
+      <div class="conteudo-dropmenu">
+        <a href="#" @click="trocarPagina('/prototype/pages/add-metas.html')">Nova Meta </a>
+      </div>
+      <div class="conteudo-dropmenu">
+        <a href="#" @click="trocarPagina('/prototype/pages/criar-grupos.html')">Novo Grupo </a>
+      </div>
+      <div class="conteudo-dropmenu">
+        <a href="#" @click="trocarPagina('/prototype/pages/criar-eventos.html')">Novo Evento </a>
+      </div>
     </div>
   </div>
-  <div class="botao-criar-grupo">
-    <button onclick="redirecionarParaNovaPagina()">Criar novo grupo</button>
-</div>
 
-<script>
-  function redirecionarParaNovaPagina() {
-    window.location.href = 'criar-grupos.html';
-  }
-</script>
+
+
+
   <footer>
     <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')"><span
-            class="material-icons md-36">home</span></button>
+        class="material-icons md-36">home</span></button>
     <button class="navbar-buttom" type="button"><span class="material-icons md-36"
-            onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
+        onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
     <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span
-            class="material-icons md-36">done_all</span></button>
+        class="material-icons md-36">done_all</span></button>
 
-</footer>
+  </footer>
 
-  </body>
+</body>
+
 </html>
