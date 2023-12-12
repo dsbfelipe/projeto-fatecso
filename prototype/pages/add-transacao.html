@@ -57,15 +57,65 @@
             </div>
             
             <div class="input-container">
-                <label for="inputCategoria" class="label-transacoes"> Categoria</label>
-                <select id="inputCategoria" class="form-control">
+                <label for="inputCategoria" class="label-transacoes">Categoria</label>
+                <select id="inputCategoria" class="form-control" onchange="showInputField()">
                     <option value="" disabled selected>Selecione a categoria</option>
-                    <option value="1">Alimentação</option>
-                    <option value="2">Mercado</option>
-                    <option value="3">Transporte</option>
-                    <option value="4">Pet</option>
+                    <option value="1">ALIMENTAÇÃO</option>
+                    <option value="2">MERCADO</option>
+                    <option value="3">TRANSPORTE</option>
+                    <option value="4">PET</option>
+                    <option value="5">Outro</option>
+                    <option value="" disabled>Categorias adicionadas pelo usuário:</option>
                 </select>
+                <input type="text" id="outraCategoria" class="form-control" style="display: none;" placeholder="Digite a nova categoria">
+                <button id="botaoAdicionar" onclick="adicionarCategoria()" style="display: none; margin-left: 15px;">Adicionar</button>
             </div>
+            
+            <script>
+                function showInputField() {
+                    var selectElement = document.getElementById("inputCategoria");
+                    var inputField = document.getElementById("outraCategoria");
+                    var botaoAdicionar = document.getElementById("botaoAdicionar");
+            
+                    if (selectElement.value === "5") { // "Outro" option selected
+                        inputField.style.display = "block";
+                        botaoAdicionar.style.display = "block";
+                    } else {
+                        inputField.style.display = "none";
+                        botaoAdicionar.style.display = "none";
+                    }
+                }
+            
+                function adicionarCategoria() {
+                    var selectElement = document.getElementById("inputCategoria");
+                    var inputField = document.getElementById("outraCategoria");
+                    var botaoAdicionar = document.getElementById("botaoAdicionar");
+                    var novaCategoria = inputField.value.trim().toUpperCase(); // Converter para maiúsculas
+            
+                    if (novaCategoria !== "") {
+                        // Cria um novo elemento de opção
+                        var novaOpcao = document.createElement("option");
+                        novaOpcao.value = novaCategoria; // Define o valor como a categoria digitada
+                        novaOpcao.text = novaCategoria;
+            
+                        // Adiciona a nova opção ao select
+                        selectElement.appendChild(novaOpcao);
+            
+                        // Define a nova opção como selecionada
+                        selectElement.value = novaCategoria;
+            
+                        // Limpa o campo de texto e oculta-o
+                        inputField.value = "";
+                        inputField.style.display = "none";
+                        botaoAdicionar.style.display = "none";
+                    }
+                }
+            </script>
+            
+            
+            
+                
+            
             
             <div class="input-container">
                 <label for="inputDescricao" class="label-transacoes"> Descrição</label>

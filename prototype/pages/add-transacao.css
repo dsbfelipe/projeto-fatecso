@@ -243,3 +243,11 @@ h1 {
 .button-container {
     cursor: pointer;
 }
+
+.input-container {
+    margin-bottom: 20px;
+}
+.delete-icon {
+    cursor: pointer;
+    margin-left: 5px;
+}
