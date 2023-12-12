@@ -46,7 +46,7 @@
                     <option value="4">Viagem Praia</option>
                 </select>
             </div>
-
+            
             <div class="input-container">
                 <label for="inputTipo" class="label-transacoes"> Tipo</label>
                 <select id="inputTipo" class="form-control">
@@ -55,7 +55,7 @@
                     <option value="2">Receita</option>
                 </select>
             </div>
-
+            
             <div class="input-container">
                 <label for="inputCategoria" class="label-transacoes">Categoria</label>
                 <select id="inputCategoria" class="form-control" onchange="showInputField()">
@@ -65,85 +65,21 @@
                     <option value="3">TRANSPORTE</option>
                     <option value="4">PET</option>
                     <option value="4"></option>
-                    <option value="5">Outro</option>
+                    <option value="5">Outra</option>
                     <option value="" disabled>Categorias adicionadas pelo usuário:</option>
                 </select>
-                <input type="text" id="outraCategoria" class="form-control" style="display: none;" placeholder="Digite a nova categoria">
-                <button id="botaoAdicionar" onclick="adicionarCategoria()" style="display: none; margin-left: 15px;">Adicionar</button>
+                <input type="text" id="outraCategoria" class="form-control" style="display: none; margin-top: 5px;" placeholder="Digite a nova categoria">
+                <button id="botaoAdicionar" onclick="adicionarCategoria()" style="display: none; margin-left: 10px;">Adicionar</button>
                 <button id="botaoDeletar" onclick="deletarCategoria()" style="display: none; margin-left: 15px;">Deletar categoria</button>
             </div>
             
-            <script>
-                function showInputField() {
-                    var selectElement = document.getElementById("inputCategoria");
-                    var inputField = document.getElementById("outraCategoria");
-                    var botaoAdicionar = document.getElementById("botaoAdicionar");
-                    var botaoDeletar = document.getElementById("botaoDeletar");
-
-                    if (selectElement.value === "5") { 
-                        inputField.style.display = "block";
-                        botaoAdicionar.style.display = "block";
-                        botaoDeletar.style.display = "none";  
-                    } else {
-                        inputField.style.display = "none";
-                        botaoAdicionar.style.display = "none";
-
-                       
-                        if (selectElement.selectedIndex >= 5) {
-                            botaoDeletar.style.display = "block";
-                        } else {
-                            botaoDeletar.style.display = "none";
-                        }
-                    }
-                }
-
-            function adicionarCategoria() {
-                var selectElement = document.getElementById("inputCategoria");
-                var inputField = document.getElementById("outraCategoria");
-                var novaCategoria = inputField.value.trim().toUpperCase(); 
-
-                if (novaCategoria !== "") {
-                    var categoriasExistentes = Array.from(selectElement.options).map(option => option.text.toUpperCase());
-                    if (categoriasExistentes.includes(novaCategoria)) {
-                        alert("Esta categoria já existe. Por favor, escolha um nome diferente.");
-                        return;
-                    }
-
-                    var novaOpcao = document.createElement("option");
-                    novaOpcao.value = novaCategoria; 
-                    novaOpcao.text = novaCategoria;
-
-                    selectElement.appendChild(novaOpcao);
-
-                    selectElement.value = novaCategoria;
-
-                    inputField.value = "";
-                    inputField.style.display = "none";
-                    document.getElementById("botaoAdicionar").style.display = "none";
-                    document.getElementById("botaoDeletar").style.display = "block";
-                }
-            }
-
-            function deletarCategoria() {
-                var selectElement = document.getElementById("inputCategoria");
-                var selectedOptionIndex = selectElement.selectedIndex;
-
-                if (selectedOptionIndex >= 5) {
-                    selectElement.remove(selectedOptionIndex);
-                } else {
-                    alert("Não é possível deletar esta categoria.");
-                }
-            }
-
-            </script>
-            
+ 
             
             <div class="input-container">
                 <label for="inputDescricao" class="label-transacoes"> Descrição</label>
-                <input type="text" id="inputDescricao" class="form-control" id="icone-transacao"
-                    placeholder="Inserir descrição">
+                <input type="text" id="inputDescricao" class="form-control" id="icone-transacao" placeholder="Inserir descrição">
             </div>
-
+            
             <div class="input-container" id="sharing-list" style="display: none;">
                 <label for="my-list" class="label-transacoes">Dividir com:</label>
                 <div class="sharing-list">
@@ -169,7 +105,7 @@
                     </ul>
                 </div>
             </div>
-
+            
             <div class="mb-4 mt-2">
                 <label for="inputRecorrente" class="label-transacoes">
                     <input type="checkbox" id="inputRecorrente" class="form-check-input mr-2">
@@ -190,16 +126,17 @@
                     <input type="date" id="customDate" class="form-control custom-date">
                 </div>
             </div>
-
-        </div>
-        
-        <div class="container-footer">
-            <div class="button-container" onclick="showMessage()">
-                <i class="fa-regular fa-circle-check fa-3x"></i>
+            
+            <div class="container-footer">
+                <div class="button-container" onclick="showMessage()">
+                    <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
             </div>
-        </div>
 
+               
 
+            <footer>
+            </footer>
 </body>
 
 </html>

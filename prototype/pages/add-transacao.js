@@ -166,3 +166,68 @@ function showMessage() {
     const sharingList = document.getElementById('sharing-list');
         sharingList.style.display = 'none';
 }
+
+
+
+//adicionar categorias
+
+function showInputField() {
+    var selectElement = document.getElementById("inputCategoria");
+    var inputField = document.getElementById("outraCategoria");
+    var botaoAdicionar = document.getElementById("botaoAdicionar");
+    var botaoDeletar = document.getElementById("botaoDeletar");
+
+    if (selectElement.value === "5") { 
+        inputField.style.display = "block";
+        botaoAdicionar.style.display = "block";
+        botaoDeletar.style.display = "none";  
+    } else {
+        inputField.style.display = "none";
+        botaoAdicionar.style.display = "none";
+
+       
+        if (selectElement.selectedIndex >= 5) {
+            botaoDeletar.style.display = "block";
+        } else {
+            botaoDeletar.style.display = "none";
+        }
+    }
+}
+
+function adicionarCategoria() {
+var selectElement = document.getElementById("inputCategoria");
+var inputField = document.getElementById("outraCategoria");
+var novaCategoria = inputField.value.trim().toUpperCase(); 
+
+if (novaCategoria !== "") {
+    var categoriasExistentes = Array.from(selectElement.options).map(option => option.text.toUpperCase());
+    if (categoriasExistentes.includes(novaCategoria)) {
+        alert("Esta categoria já existe. Por favor, escolha um nome diferente.");
+        return;
+    }
+
+    var novaOpcao = document.createElement("option");
+    novaOpcao.value = novaCategoria; 
+    novaOpcao.text = novaCategoria;
+
+    selectElement.appendChild(novaOpcao);
+
+    selectElement.value = novaCategoria;
+
+    inputField.value = "";
+    inputField.style.display = "none";
+    document.getElementById("botaoAdicionar").style.display = "none";
+    document.getElementById("botaoDeletar").style.display = "block";
+}
+}
+
+function deletarCategoria() {
+var selectElement = document.getElementById("inputCategoria");
+var selectedOptionIndex = selectElement.selectedIndex;
+
+if (selectedOptionIndex >= 5) {
+    selectElement.remove(selectedOptionIndex);
+} else {
+    alert("Não é possível deletar esta categoria.");
+}
+}
