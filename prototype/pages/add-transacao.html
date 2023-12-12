@@ -18,7 +18,7 @@
 <body>
     <div class="full-page">
         <div class="container-header">
-            <button class="btn-voltar" type="button" onclick="trocarPagina('/prototype/index.html')">
+            <button class="btn-voltar" type="button" onclick="trocarPagina('../index.html')">
                 <span class="icon-wrapper">
                     <i class="fa-solid fa-arrow-left"></i>
                 </span>
@@ -57,16 +57,87 @@
             </div>
 
             <div class="input-container">
-                <label for="inputCategoria" class="label-transacoes"> Categoria</label>
-                <select id="inputCategoria" class="form-control">
+                <label for="inputCategoria" class="label-transacoes">Categoria</label>
+                <select id="inputCategoria" class="form-control" onchange="showInputField()">
                     <option value="" disabled selected>Selecione a categoria</option>
-                    <option value="1">Alimentação</option>
-                    <option value="2">Mercado</option>
-                    <option value="3">Transporte</option>
-                    <option value="4">Pet</option>
+                    <option value="1">ALIMENTAÇÃO</option>
+                    <option value="2">MERCADO</option>
+                    <option value="3">TRANSPORTE</option>
+                    <option value="4">PET</option>
+                    <option value="4"></option>
+                    <option value="5">Outro</option>
+                    <option value="" disabled>Categorias adicionadas pelo usuário:</option>
                 </select>
+                <input type="text" id="outraCategoria" class="form-control" style="display: none;" placeholder="Digite a nova categoria">
+                <button id="botaoAdicionar" onclick="adicionarCategoria()" style="display: none; margin-left: 15px;">Adicionar</button>
+                <button id="botaoDeletar" onclick="deletarCategoria()" style="display: none; margin-left: 15px;">Deletar categoria</button>
             </div>
+            
+            <script>
+                function showInputField() {
+                    var selectElement = document.getElementById("inputCategoria");
+                    var inputField = document.getElementById("outraCategoria");
+                    var botaoAdicionar = document.getElementById("botaoAdicionar");
+                    var botaoDeletar = document.getElementById("botaoDeletar");
 
+                    if (selectElement.value === "5") { 
+                        inputField.style.display = "block";
+                        botaoAdicionar.style.display = "block";
+                        botaoDeletar.style.display = "none";  
+                    } else {
+                        inputField.style.display = "none";
+                        botaoAdicionar.style.display = "none";
+
+                       
+                        if (selectElement.selectedIndex >= 5) {
+                            botaoDeletar.style.display = "block";
+                        } else {
+                            botaoDeletar.style.display = "none";
+                        }
+                    }
+                }
+
+            function adicionarCategoria() {
+                var selectElement = document.getElementById("inputCategoria");
+                var inputField = document.getElementById("outraCategoria");
+                var novaCategoria = inputField.value.trim().toUpperCase(); 
+
+                if (novaCategoria !== "") {
+                    var categoriasExistentes = Array.from(selectElement.options).map(option => option.text.toUpperCase());
+                    if (categoriasExistentes.includes(novaCategoria)) {
+                        alert("Esta categoria já existe. Por favor, escolha um nome diferente.");
+                        return;
+                    }
+
+                    var novaOpcao = document.createElement("option");
+                    novaOpcao.value = novaCategoria; 
+                    novaOpcao.text = novaCategoria;
+
+                    selectElement.appendChild(novaOpcao);
+
+                    selectElement.value = novaCategoria;
+
+                    inputField.value = "";
+                    inputField.style.display = "none";
+                    document.getElementById("botaoAdicionar").style.display = "none";
+                    document.getElementById("botaoDeletar").style.display = "block";
+                }
+            }
+
+            function deletarCategoria() {
+                var selectElement = document.getElementById("inputCategoria");
+                var selectedOptionIndex = selectElement.selectedIndex;
+
+                if (selectedOptionIndex >= 5) {
+                    selectElement.remove(selectedOptionIndex);
+                } else {
+                    alert("Não é possível deletar esta categoria.");
+                }
+            }
+
+            </script>
+            
+            
             <div class="input-container">
                 <label for="inputDescricao" class="label-transacoes"> Descrição</label>
                 <input type="text" id="inputDescricao" class="form-control" id="icone-transacao"

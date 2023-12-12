@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Hedvig+Letters+Serif:opsz@12..24&family=Poppins:wght@300;400;500&display=swap');
+
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-buttom {
+    width: 100%;
+    height: 13vw;
+    border: none;
+    border-top: 1px rgb(233, 233, 233) solid;
+    background-color: white;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+
+.material-icons.white600 {
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    height: 45px;
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.title-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-left: 25px;
+    margin-top: 5px;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    background-color: #ECF3FB;
+}
+
+* {
+    --cinza: rgb(124, 124, 124);
+    --azul: #6581FC;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.material-icons.md-32 {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.icone-grupo {
+    background-image: url(/prototype/images/familia.jpg);
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(205, 219, 224);
+    margin-left: 30px;
+}
+
+.head {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nome-grupo {
+    margin-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.contas-grupo {
+    margin-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--cinza);
+}
+
+.num-contas {
+    color: rgb(255, 61, 61);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.quitar-todas {
+    border: none;
+    width: 300px;
+    height: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border-radius: 30px;
+}
+
+.center-botao {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.data {
+    margin-left: 30px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.container-transacoes {
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.dia-mes {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.transacao {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dia {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 19px;
+    margin-top: -5px;
+}
+
+.mes {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.dados {
+    font-size: 13px;
+}
+
+.quitar-uma {
+    font-size: 12px;
+    width: 70px;
+    height: 35px;
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.verde {
+    color: rgb(20, 204, 20);
+    text-decoration: underline;
+}
+
+.transacao:last-child {
+    margin-bottom: 60px;
+}
