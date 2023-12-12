@@ -19,6 +19,26 @@
         <img class="profile-picture" src="images/profile-picture.jpeg" alt="Foto de perfil do usuário">
         <img class="pro-icon" src="images/pro-icon.png" alt="Selo de membro PRO">
         <h1 class="center welcome">Bem vindo(a) de volta!</h1>
+        
+        <div class="input-container">
+            <select id="inputPerfil" class="form-control" onchange="toggleSharingList()">
+                <option value="0">Visualizar anos anteriores</option>
+                <option value="13"></option>
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12" disabled selected>Dezembro</option>
+            </select>
+        </div>
+
         <p class="center saldo-header">Saldo da conta</p>
         <p class="center saldo-valor">R$2.040,00</p>
         <div class="receitas-despesas">
