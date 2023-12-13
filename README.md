@@ -90,7 +90,7 @@
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="documentation/prototype.svg" />
 <source media="(prefers-color-scheme: light)" srcset="documentation/prototype.svg" />
-<img width="100%">
+<img width="40%">
 </picture>
 
 
