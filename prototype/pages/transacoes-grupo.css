@@ -17,6 +17,9 @@ footer {
     background-color: white;
 }
 
+#btnTransacoes {
+    color: #465eca;
+}
 .material-icons.md-36 {
     font-size: 36px;
 }
@@ -58,6 +61,16 @@ body {
 .material-icons.md-32 {
     font-size: 50px;
     font-weight: 100;
+}
+
+#inputPerfil{
+    border: solid;
+    border-radius: 20px;
+    padding: 5px;
+    border-color: #e2ebf7;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 8px;
 }
 
 .icone-grupo {

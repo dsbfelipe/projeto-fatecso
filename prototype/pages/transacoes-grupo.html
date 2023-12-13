@@ -1,136 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-08">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Transações - Família</title>
-        <link rel="stylesheet" href="/prototype/pages/transacoes-grupo.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <script src=""></script>
-    </head>
-    <body>
-        <div class="title">
-            <p class="title-text">Transações</p>
-        </div>
-        <div class="head">
-            <div class="icone-grupo">
-                <img class="foto-grupo" src="/prototype/images/familia-2.jpg" alt="Foto família">
-            </div>
-            <h1 class="nome-grupo">Família</h1>
-            <p class="contas-grupo">Você tem <span class="num-contas">3</span> dívidas pendentes nesse grupo.</p>
-            <div class="center-botao">
-                <button class="quitar-todas">Quitar todas as dívidas</button>
-            </div>
+
+<head>
+    <meta charset="UTF-08">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações - Família</title>
+    <link rel="stylesheet" href="/prototype/pages/transacoes-grupo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="/prototype/js/script.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        <p class="title-text">Transações</p>
+    </div>
+    <div class="head">
+        <div class="icone-grupo">
+            <img class="foto-grupo" src="/prototype/images/familia-2.jpg" alt="Foto família">
         </div>
 
-        <div class="container-transacoes">
-            <p class="data">dezembro 2023</p>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">09</p>
-                </div>
-                <p class="dados">Jorge M. Souza pagou R$24,99 a Maria J. Souza</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">09</p>
-                </div>
-                <p class="dados">Você <span class="num-contas">deve</span> R$21,99 a Maria J. Souza</p>
-                <button class="quitar-uma">Quitar</button>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">08</p>
-                </div>
-                <p class="dados">Martha M. Silva pagou R$74,99 a João Souza</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">07</p>
-                </div>
-                <p class="dados">Leonardo M. Loures pagou R$7,99 a Eliezer</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">06</p>
-                </div>
-                <p class="dados">Kleber M. Mathiazzi pagou R$4,99 a Maria</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">06</p>
-                </div>
-                <p class="dados">Renan Carlos pagou R$9,99 a Carla Jorge</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">05</p>
-                </div>
-                <p class="dados">Você <span class="verde">pagou</span> R$11,99 a Mariana Parducci</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">04</p>
-                </div>
-                <p class="dados">Lauri Ellen pagou R$4,99 a Jorge de Luca</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">04</p>
-                </div>
-                <p class="dados">Você <span class="num-contas">deve</span> R$2,99 a Leonardo Arni</p>
-                <button class="quitar-uma">Quitar</button>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">03</p>
-                </div>
-                <p class="dados">Martha pagou R$8,99 a Maria J. Souza</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">01</p>
-                </div>
-                <p class="dados">João Pedro deve R$0,89 a Jorge Rodrigues</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">01</p>
-                </div>
-                <p class="dados">Karla M. Souza pagou R$4,99 a Maria J. Souza</p>
-            </div>
-            <div class="transacao">
-                <div class="dia-mes">
-                    <p class="mes">dez</p>
-                    <p class="dia">01</p>
-                </div>
-                <p class="dados">Você <span class="num-contas">deve</span> R$7,99 a Karla M. Souza</p>
-                <button class="quitar-uma">Quitar</button>
-            </div>
+        <select id="inputPerfil" class="form-control">
+            <option value="1">Grupo Família</option>
+            <option value="2">Pessoal</option>
+            <option value="3">Churrasco fim de ano</option>
+            <option value="4">Viagem Praia</option>
+        </select>
+
+        <p class="contas-grupo">Você tem <span class="num-contas">3</span> dívidas pendentes nesse grupo.</p>
+        <div class="center-botao">
+            <button class="quitar-todas">Quitar todas as dívidas</button>
         </div>
+    </div>
 
-        
+    <div class="container-transacoes">
+        <p class="data">dezembro 2023</p>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">09</p>
+            </div>
+            <p class="dados">Jorge M. Souza pagou R$24,99 a Maria J. Souza</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">09</p>
+            </div>
+            <p class="dados">Você <span class="num-contas">deve</span> R$21,99 a Maria J. Souza</p>
+            <button class="quitar-uma">Quitar</button>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">08</p>
+            </div>
+            <p class="dados">Martha M. Silva pagou R$74,99 a João Souza</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">07</p>
+            </div>
+            <p class="dados">Leonardo M. Loures pagou R$7,99 a Eliezer</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">06</p>
+            </div>
+            <p class="dados">Kleber M. Mathiazzi pagou R$4,99 a Maria</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">06</p>
+            </div>
+            <p class="dados">Renan Carlos pagou R$9,99 a Carla Jorge</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">05</p>
+            </div>
+            <p class="dados">Você <span class="verde">pagou</span> R$11,99 a Mariana Parducci</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">04</p>
+            </div>
+            <p class="dados">Lauri Ellen pagou R$4,99 a Jorge de Luca</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">04</p>
+            </div>
+            <p class="dados">Você <span class="num-contas">deve</span> R$2,99 a Leonardo Arni</p>
+            <button class="quitar-uma">Quitar</button>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">03</p>
+            </div>
+            <p class="dados">Martha pagou R$8,99 a Maria J. Souza</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">01</p>
+            </div>
+            <p class="dados">João Pedro deve R$0,89 a Jorge Rodrigues</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">01</p>
+            </div>
+            <p class="dados">Karla M. Souza pagou R$4,99 a Maria J. Souza</p>
+        </div>
+        <div class="transacao">
+            <div class="dia-mes">
+                <p class="mes">dez</p>
+                <p class="dia">01</p>
+            </div>
+            <p class="dados">Você <span class="num-contas">deve</span> R$7,99 a Karla M. Souza</p>
+            <button class="quitar-uma">Quitar</button>
+        </div>
+    </div>
 
-        <footer>
-            <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')"><span
-                    class="material-icons md-36">home</span></button>
-            <button class="navbar-buttom" type="button"><span class="material-icons md-36"
-                    onclick="trocarPagina('/prototype/pages/grupos.html')">people</span></button>
-            <button class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/pages/ver-metas.html')"><span
-                    class="material-icons md-36">done_all</span></button>
-        </footer>
-    </body>
+
+
+    <footer>
+        <button id="btnHome" class="navbar-buttom" type="button" onclick="trocarPagina('/prototype/index.html')">
+            <span class="material-icons md-36">home</span>
+        </button>
+        <button id="btnGrupos" class="navbar-buttom" type="button"
+            onclick="trocarPagina('/prototype/pages/grupos.html')">
+            <span class="material-icons md-36">people</span>
+        </button>
+        <button id="btnMetas" class="navbar-buttom" type="button"
+            onclick="trocarPagina('/prototype/pages/ver-metas.html')">
+            <span class="material-icons md-36">done_all</span>
+        </button>
+        <button id="btnTransacoes" class="navbar-buttom" type="button"
+            onclick="trocarPagina('/prototype/pages/transacoes-grupo.html')"><span
+                class="material-icons md-36">receipt_long</span></button>
+
+    </footer>
+</body>
+
 </html>
